@@ -8,7 +8,7 @@ public interface NewsService {
 
 	public void addNews(News news);
 
-    public List<News> listContact();
+    public List<News> listNews();
 
     public void removeNews(Integer id);
     

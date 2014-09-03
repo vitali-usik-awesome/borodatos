@@ -21,7 +21,7 @@ public class NewsServiceImpl implements NewsService {
 	}
 
 	@Transactional
-	public List<News> listContact() {
+	public List<News> listNews() {
 		return newsDao.listNews();
 	}
 
