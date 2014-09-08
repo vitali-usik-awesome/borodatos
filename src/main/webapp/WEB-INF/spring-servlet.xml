@@ -11,7 +11,7 @@
 		</property>
 	</bean>
 
-	<bean id="infoController" class="com.borodatos.controller.InfoController">
+	<bean id="homeController" class="com.borodatos.mvc.home.HomeController">
 	</bean>
 
 </beans>
