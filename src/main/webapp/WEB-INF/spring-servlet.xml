@@ -3,15 +3,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
 
-	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-		<property name="mappings">
-			<props>
-				<prop key="/info.html">infoController</prop>
-			</props>
-		</property>
-	</bean>
-
-	<bean id="homeController" class="com.borodatos.mvc.home.HomeController">
-	</bean>
+	<bean id="homeController" class="com.borodatos.mvc.home.HomeController"></bean>
+	
+	<bean id="newsController" class="com.borodatos.mvc.news.NewsController"></bean>
 
 </beans>
