@@ -1,5 +1,6 @@
 package com.borodatos.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.logging.Log;
@@ -11,17 +12,17 @@ import org.springframework.transaction.annotation.Transactional;
 import com.borodatos.dao.ArticleDAO;
 import com.borodatos.model.Article;
 
-@Service
+@Service("articleService")
 public class ArticleServiceImpl implements ArticleService {
 
 	private static Log log = LogFactory.getLog(ArticleServiceImpl.class);
-	
+
 	@Autowired
 	private ArticleDAO articleDAO;
-	
+
 	@Transactional
 	public List<Article> listArticle() {
-		
+
 		log.info("from service");
 		return articleDAO.listArticle();
 	}
