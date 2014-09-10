@@ -1,11 +1,15 @@
-package com.borodatos.mvc.home;
+package com.borodatos.controller;
 
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.borodatos.model.Article;
 import com.borodatos.service.ArticleService;
@@ -31,13 +35,11 @@ public class HomeController {
 		return "Ololo!";
 	}
 	
-	@RequestMapping("/first")
+	@RequestMapping(value="/first")
 	public String listArticles(Map<String, Object> map) {
 		
 		log.info("from controller - start");
-		map.put("article", new Article());
-		map.put("articleList", articleService.listArticle());
-		log.info("from controller - finish");
+		log.info("articles[1]: " + articleService.listArticle().get(0).getContent());
 		return "article";
 	}
 }
