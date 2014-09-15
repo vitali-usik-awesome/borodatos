@@ -10,8 +10,7 @@ import javax.persistence.Table;
 @Table(name = "ARTICLE")
 public class Article {
 
-	public Article() {
-		
+	public Article() {	
 	}
 	
 	@Id
