@@ -10,6 +10,10 @@ import javax.persistence.Table;
 @Table(name = "ARTICLE")
 public class Article {
 
+	public Article() {
+		
+	}
+	
 	@Id
     @Column(name = "ID")
     @GeneratedValue
