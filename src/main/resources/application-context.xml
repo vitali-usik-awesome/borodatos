@@ -5,6 +5,7 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:jee="http://www.springframework.org/schema/jee"
        xmlns:lang="http://www.springframework.org/schema/lang"
+      
        xmlns:p="http://www.springframework.org/schema/p"
        xmlns:tx="http://www.springframework.org/schema/tx"
        xmlns:util="http://www.springframework.org/schema/util"
@@ -20,6 +21,7 @@
     <context:component-scan base-package="com.borodatos" />
     
     <import resource="/db-config.xml" />
+    <!-- <mvc:resources mapping="/resources/**" location="/resources/" /> -->
     
     <bean id="jspViewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver">

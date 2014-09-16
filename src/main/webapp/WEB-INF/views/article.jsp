@@ -5,8 +5,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf8">
 <title>borodatos</title>
+<link href="resources/css/style.css" rel="stylesheet"  type="text/css" />
 </head>
 <body>
+<div class="wrapper">
 	<p>Hello World! from article.jsp!</p>
 
 	<h3>Articles</h3>
@@ -28,5 +30,6 @@
 			</c:forEach>
 		</table>
 	</c:if>
+</div>
 </body>
 </html>

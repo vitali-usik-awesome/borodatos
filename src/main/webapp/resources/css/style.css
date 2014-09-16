@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+/* reset by medic */
+* {padding:0; margin:0;}
+img {border:0 none;}
+div {display:block; position:relative;}
+ul {list-style: none;}
+.hidden {display: none;}
+.clr:after {display:none; position:relative; content:' '; color:transparent; font-size:0; line-height:0; clear:both;}
+
+/* clearfix */
+.clearfix:before,  
+.clearfix:after {content: " "; display: block;}  
+.clearfix:after {clear: both;}  
+.clearfix {*zoom: 1;}
+
+
+body {background: #000;}
+
+
+/* wrapper */
+.wrapper {max-width: 1200px; margin: 0 auto; background: #fff;}
