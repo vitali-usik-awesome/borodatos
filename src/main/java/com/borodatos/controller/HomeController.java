@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
 import com.borodatos.model.Article;
+import com.borodatos.model.ComicsArticle;
 import com.borodatos.service.ArticleService;
 
 import org.apache.commons.logging.Log;
@@ -22,6 +24,11 @@ public class HomeController {
 	
 	@RequestMapping("/")
 	public String homePage(Map<String, Object> map) {
+		
+		map.put("comics", new ComicsArticle());
+		log.info("comics[1]: " + articleService.listComics().get(0).getContent()); 
+		
+		
 		return "home";
 	}
 	

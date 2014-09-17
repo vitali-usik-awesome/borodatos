@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import com.borodatos.controller.HomeController;
 import com.borodatos.model.Article;
+import com.borodatos.model.ComicsArticle;
 
 @Repository
 public class ArticleDAO {
@@ -30,6 +31,11 @@ public class ArticleDAO {
 //		return articles;
 		return sessionFactory.getCurrentSession().createQuery("from Article")
 	            .list();
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<ComicsArticle> listComics() {
+		return sessionFactory.getCurrentSession().createQuery("from ComicsArticle").list();
 	}
 	
 }

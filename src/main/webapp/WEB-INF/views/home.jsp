@@ -69,6 +69,7 @@
 			<!-- content -->
 			<div class="content">
 				<p>Hello World! from home.jsp!</p>
+				
 			</div>
 			<!-- /content -->
 			<!-- footer -->
