@@ -21,8 +21,8 @@ public class HomeController {
 	private ArticleService articleService;
 	
 	@RequestMapping("/")
-	public String home() {
-		return "hello";
+	public String homePage(Map<String, Object> map) {
+		return "home";
 	}
 	
 	@RequestMapping("/ololo")
