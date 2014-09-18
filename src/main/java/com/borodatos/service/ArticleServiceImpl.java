@@ -11,7 +11,11 @@ import org.springframework.transaction.annotation.Transactional;
 import com.borodatos.dao.ArticleDAO;
 import com.borodatos.model.ComicsArticle;
 
-@Service //("articleService")
+/**
+ * @author Vitali Usik
+ *
+ */
+@Service
 public class ArticleServiceImpl implements ArticleService {
 
 	private static Log log = LogFactory.getLog(ArticleServiceImpl.class);

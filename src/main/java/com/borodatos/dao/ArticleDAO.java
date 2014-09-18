@@ -10,13 +10,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.borodatos.controller.HomeController;
-import com.borodatos.model.Article;
 import com.borodatos.model.ComicsArticle;
 
+/**
+ * @author Vitali Usik
+ *
+ */
 @Repository
 public class ArticleDAO {
 
-	private static Log log = LogFactory.getLog(HomeController.class);
+	private static Log log = LogFactory.getLog(ArticleDAO.class);
 	
 	@Autowired
     private SessionFactory sessionFactory;

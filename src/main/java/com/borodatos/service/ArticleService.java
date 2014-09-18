@@ -4,6 +4,10 @@ import java.util.List;
 
 import com.borodatos.model.ComicsArticle;
 
+/**
+ * @author Vitali Usik
+ *
+ */
 public interface ArticleService {
 
 	public List<ComicsArticle> listComics();

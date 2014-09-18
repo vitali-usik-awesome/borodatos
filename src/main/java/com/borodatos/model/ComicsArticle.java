@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "COMICS")
-public class ComicsArticle/* extends CommonArticle */ {
+public class ComicsArticle {
 
 	public ComicsArticle() {
 	}
