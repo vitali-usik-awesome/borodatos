@@ -27,7 +27,7 @@ public class HomeController {
 		
 		map.put("comics", new ComicsArticle());
 		log.info("comics[1]: " + articleService.listComics().get(0).getContent()); 
-		
+		map.put("listComics", articleService.listComics());
 		
 		return "home";
 	}

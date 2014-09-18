@@ -68,7 +68,34 @@
 			<!-- /header -->
 			<!-- content -->
 			<div class="content">
-				<p>Hello World! from home.jsp!</p>
+				<h3>Comics</h3>
+				<c:if test="${!empty listComics}">
+					<table>
+						<tr>
+							<th>id</th>
+							<th>title</th>
+							<th>brief</th>
+							<th>content</th>
+							<th>author</th>
+							<th>date</th>
+							<th>link</th>
+							<th>views</th>
+						</tr>
+						<c:forEach items="${listComics}" var="comics">
+							<tr>
+								<td>${comics.id}</td>
+								<td>${comics.title}</td>
+								<td>${comics.brief}</td>
+								<td>${comics.content}</td>
+								<td>${comics.author}</td>
+								<td>${comics.date}</td>
+								<td>${comics.link}</td>
+								<td>${comics.views}</td>
+							</tr>
+						</c:forEach>
+					</table>
+				</c:if>
+				
 				
 			</div>
 			<!-- /content -->
