@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf8">
 <title>borodatos</title>
-<link href="resources/css/style.css" rel="stylesheet" type="text/css" />
+<link href="${pageContext.request.contextPath}/resources/css/style.css" rel="stylesheet" type="text/css" />
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script>
@@ -35,7 +35,7 @@
 				<!-- hLogo -->
 				<div class="hLogo">
 					<a href="#" class="logo">
-						<img src="resources/img/boro_logo_test.png" alt="logo" />
+						<img src="${pageContext.request.contextPath}/resources/img/boro_logo_test.png" alt="logo" />
 					</a>
 					<div class="search">
 						<input type="search" placeholder="Search" />
@@ -84,7 +84,7 @@
 						<c:forEach items="${listComics}" var="comics">
 							<tr>
 								<td>${comics.id}</td>
-								<td>${comics.title}</td>
+								<td><a href="${pageContext.request.contextPath}/comics/${comics.link}">${comics.title}</a></td>
 								<td>${comics.brief}</td>
 								<td>${comics.content}</td>
 								<td>${comics.author}</td>
@@ -124,7 +124,7 @@
 				</div>
 				<div class="footer_column">
 					<a href="#" class="">
-						<img src="resources/img/borodatos_footer.png" alt="logo" />
+						<img src="${pageContext.request.contextPath}/resources/img/borodatos_footer.png" alt="logo" />
 					</a>
 				</div>
 				<div class="footer_column clr">

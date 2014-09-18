@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.borodatos.dao.ArticleDAO;
-import com.borodatos.model.Article;
 import com.borodatos.model.ComicsArticle;
 
 @Service //("articleService")
@@ -19,18 +18,17 @@ public class ArticleServiceImpl implements ArticleService {
 
 	@Autowired
 	private ArticleDAO articleDAO;
-
-	@Transactional
-	public List<Article> listArticle() {
-
-		log.info("from service");
-		return articleDAO.listArticle();
-	}
 	
 	@Transactional
 	public List<ComicsArticle> listComics() {
 		
 		return articleDAO.listComics();
+	}
+
+	@Transactional
+	public ComicsArticle retrieveComics(String link) {
+		
+		return articleDAO.retriveUser(link);
 	}
 
 }
