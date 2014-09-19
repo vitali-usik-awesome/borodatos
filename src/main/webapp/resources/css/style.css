@@ -47,6 +47,9 @@ nav {height: 40px; width: 100%; background: #fff; font-size: 1.2em; font-weight:
 
 /* content */
 .content {background: #fff; width: 100%; padding-top: 2em;}
+/* only in java project */
+.test_comics_wrapper {width: 100%; overflow: hidden;}
+	.test_comics_item {max-width: 590px; width: 49%; float: left; margin: 0 0.3em;}
 
 /* popular */
 .popular_wrapper {width: 100%;}

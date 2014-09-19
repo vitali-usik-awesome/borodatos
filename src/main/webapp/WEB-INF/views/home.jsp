@@ -68,35 +68,20 @@
 			<!-- /header -->
 			<!-- content -->
 			<div class="content">
-				<h3>Comics</h3>
+				<h3>Comics</h3>	
+				<div class="test_comics_wrapper">			
 				<c:if test="${!empty listComics}">
-					<table>
-						<tr>
-							<th>id</th>
-							<th>title</th>
-							<th>brief</th>
-							<th>content</th>
-							<th>author</th>
-							<th>date</th>
-							<th>link</th>
-							<th>views</th>
-						</tr>
-						<c:forEach items="${listComics}" var="comics">
-							<tr>
-								<td>${comics.id}</td>
-								<td><a href="${pageContext.request.contextPath}/comics/${comics.link}">${comics.title}</a></td>
-								<td>${comics.brief}</td>
-								<td>${comics.content}</td>
-								<td>${comics.author}</td>
-								<td>${comics.date}</td>
-								<td>${comics.link}</td>
-								<td>${comics.views}</td>
-							</tr>
-						</c:forEach>
-					</table>
+					<c:forEach items="${listComics}" var="comics">
+					
+						<div class="test_comics_item">
+							<h4><a href="${pageContext.request.contextPath}/comics/${comics.link}">${comics.title}</a></h4>
+							<p>${comics.content}</p>
+							<p>Author: ${comics.author}. Date: ${comics.date}. Views: ${comics.views}</p>
+						</div>
+						
+					</c:forEach>
 				</c:if>
-				
-				
+				</div>
 			</div>
 			<!-- /content -->
 			<!-- footer -->
