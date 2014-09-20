@@ -34,7 +34,7 @@
 			<header>
 				<!-- hLogo -->
 				<div class="hLogo">
-					<a href="#" class="logo">
+					<a href="${pageContext.request.contextPath}" class="logo">
 						<img src="${pageContext.request.contextPath}/resources/img/boro_logo_test.png" alt="logo" />
 					</a>
 					<div class="search">
@@ -53,7 +53,7 @@
 				<!-- nav -->
 				<nav class="clearfix">  
     				<ul class="clearfix">  
-     					<li><a href="#">home</a></li>
+     					<li><a href="${pageContext.request.contextPath}">home</a></li>
 						<li><a href="#">comics</a></li>
 						<li><a href="#">music</a></li>
 						<li><a href="#">games</a></li>
@@ -70,17 +70,15 @@
 			<div class="content">
 				<h3>Comics</h3>	
 				<div class="test_comics_wrapper">			
-				<c:if test="${!empty listComics}">
-					<c:forEach items="${listComics}" var="comics">
-					
-						<div class="test_comics_item">
-							<h4><a href="${pageContext.request.contextPath}/comics/${comics.link}">${comics.title}</a></h4>
-							<p>${comics.content}</p>
-							<p>Author: ${comics.author}. Date: ${comics.date}. Views: ${comics.views}</p>
-						</div>
-						
-					</c:forEach>
-				</c:if>
+					<c:if test="${!empty listComics}">
+						<c:forEach items="${listComics}" var="comics">
+							<div class="test_comics_item">
+								<h4><a href="${pageContext.request.contextPath}/comics/${comics.link}">${comics.title}</a></h4>
+								<p>${comics.content}</p>
+								<p>Author: ${comics.author}. Date: ${comics.date}. Views: ${comics.views}</p>
+							</div>	
+						</c:forEach>
+					</c:if>
 				</div>
 			</div>
 			<!-- /content -->

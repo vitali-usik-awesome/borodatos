@@ -43,4 +43,14 @@ public class HomeController {
 		return "comics_page";
 	}
 	
+	@RequestMapping("/admin/edit/{link}")
+	public String editComics(@PathVariable("link") String link, Map<String, Object> map) {
+
+		log.info("link in EDIT action: " + link);
+		ComicsArticle comicsArticle = articleService.retrieveComics(link);
+        map.put("comics", comicsArticle); 
+
+        return "comics_edit";
+    }
+	
 }

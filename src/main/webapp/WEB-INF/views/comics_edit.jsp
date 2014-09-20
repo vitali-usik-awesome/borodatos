@@ -80,7 +80,6 @@
 							<th>date</th>
 							<th>link</th>
 							<th>views</th>
-							<th>action</th>
 						</tr>
 						<tr>
 							<td>${comics.id}</td>
@@ -91,7 +90,6 @@
 							<td>${comics.date}</td>
 							<td>${comics.link}</td>
 							<td>${comics.views}</td>
-							<td><a href="${pageContext.request.contextPath}/admin/edit/${comics.link}">edit</a></td>
 						</tr>					
 					</table>		
 			</div>
