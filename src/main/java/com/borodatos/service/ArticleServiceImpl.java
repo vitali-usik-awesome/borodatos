@@ -32,7 +32,7 @@ public class ArticleServiceImpl implements ArticleService {
 	@Transactional
 	public ComicsArticle retrieveComics(String link) {
 		
-		return articleDAO.retriveUser(link);
+		return articleDAO.retriveComics(link);
 	}
 
 	@Transactional

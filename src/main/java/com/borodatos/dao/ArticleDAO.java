@@ -9,7 +9,6 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.borodatos.controller.HomeController;
 import com.borodatos.model.ComicsArticle;
 
 /**
@@ -29,10 +28,16 @@ public class ArticleDAO {
 		return sessionFactory.getCurrentSession().createQuery("from ComicsArticle").list();
 	}
 
-	public ComicsArticle retriveUser(String link) {
+	public ComicsArticle retriveComics(String link) {
+		ComicsArticle comicsArticle = null;
 		Query q = sessionFactory.getCurrentSession().createQuery("from ComicsArticle where link = :link");
 		q.setString("link", link);
-		return (ComicsArticle) q.uniqueResult();
+		comicsArticle = (ComicsArticle) q.uniqueResult();
+		Integer viewPlus = comicsArticle.getViews() + 1;
+		comicsArticle.setViews(viewPlus);
+		sessionFactory.getCurrentSession().saveOrUpdate(comicsArticle);
+		
+		return comicsArticle;
 	}
 
 	public void saveComics(ComicsArticle comics) {
