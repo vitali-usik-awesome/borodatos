@@ -16,4 +16,6 @@ public interface ArticleService {
 
 	public void saveComics(ComicsArticle comics);
 
+	public void removeComics(Integer id);
+
 }

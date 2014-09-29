@@ -41,4 +41,10 @@ public class ArticleServiceImpl implements ArticleService {
 		articleDAO.saveComics(comics);
 	}
 
+	@Transactional
+	public void removeComics(Integer id) {
+		
+		articleDAO.removeComics(id);
+	}
+
 }

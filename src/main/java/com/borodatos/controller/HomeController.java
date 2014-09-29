@@ -61,5 +61,19 @@ public class HomeController {
 		
 		return "redirect:/admin/edit/" + comics.getLink();
 	}
+	
+	@RequestMapping("/admin/add")
+    public String addComicsArticle(@ModelAttribute("comics") ComicsArticle comics, BindingResult result) {
+
+        return "comics_edit";
+    }
+	
+	@RequestMapping("/admin/delete/{id}")
+    public String deleteUser(@PathVariable("id") Integer id) {
+
+		articleService.removeComics(id);
+
+        return "redirect:/";
+    }
 
 }

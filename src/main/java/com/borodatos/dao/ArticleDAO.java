@@ -44,4 +44,13 @@ public class ArticleDAO {
 		sessionFactory.getCurrentSession().saveOrUpdate(comics);
 		
 	}
+
+	public void removeComics(Integer id) {
+		ComicsArticle comics = (ComicsArticle) sessionFactory.getCurrentSession().load(
+                ComicsArticle.class, id);
+        if (null != comics) {
+            sessionFactory.getCurrentSession().delete(comics);
+        }
+		
+	}
 }

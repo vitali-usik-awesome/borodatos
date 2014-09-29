@@ -81,6 +81,8 @@
 							<th>link</th>
 							<th>views</th>
 							<th>action</th>
+							<th>action2</th>
+							<th>action3</th>
 						</tr>
 						<tr>
 							<td>${comics.id}</td>
@@ -92,6 +94,8 @@
 							<td>${comics.link}</td>
 							<td>${comics.views}</td>
 							<td><a href="${pageContext.request.contextPath}/admin/edit/${comics.link}">edit</a></td>
+							<td><a href="${pageContext.request.contextPath}/admin/add">add</a></td>
+							<td><a href="${pageContext.request.contextPath}/admin/delete/${comics.id}">delete</a></td>
 						</tr>					
 					</table>		
 			</div>
