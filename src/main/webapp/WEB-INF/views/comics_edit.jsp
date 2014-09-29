@@ -69,30 +69,46 @@
 			<!-- content -->
 			<div class="content">
 				<h3>Comics</h3>
-				
-					<table>
-						<tr>
-							<th>id</th>
-							<th>title</th>
-							<th>brief</th>
-							<th>content</th>
-							<th>author</th>
-							<th>date</th>
-							<th>link</th>
-							<th>views</th>
-						</tr>
-						<tr>
-							<td>${comics.id}</td>
-							<td>${comics.title}</td>
-							<td>${comics.brief}</td>
-							<td>${comics.content}</td>
-							<td>${comics.author}</td>
-							<td>${comics.date}</td>
-							<td>${comics.link}</td>
-							<td>${comics.views}</td>
-						</tr>					
-					</table>		
-			</div>
+					<form:form method="post" action="${pageContext.request.contextPath}/comics/save" commandName="comics">
+						<table>
+							<tr>
+								<td><form:label path="id">id</form:label></td>
+								<td><form:input path="id" /></td>
+							</tr>
+							<tr>
+								<td><form:label path="id">title</form:label></td>
+								<td><form:input path="title" /></td>
+							</tr>
+							<tr>
+								<td><form:label path="id">brief</form:label></td>
+								<td><form:input path="brief" /></td>
+							</tr>
+							<tr>
+								<td><form:label path="id">content</form:label></td>
+								<td><form:input path="content" /></td>
+							</tr>
+							<tr>
+								<td><form:label path="id">author</form:label></td>
+								<td><form:input path="author" /></td>
+							</tr>
+							<tr>
+								<td><form:label path="id">date</form:label></td>
+								<td><form:input path="date" /></td>
+							</tr>
+							<tr>
+								<td><form:label path="id">link</form:label></td>
+								<td><form:input path="link" /></td>
+							</tr>
+							<tr>
+								<td><form:label path="id">views</form:label></td>
+								<td><form:input path="views" /></td>
+							</tr>
+							<tr>
+								<td colspan="2"><input type="submit" value="Save" /></td>
+							</tr>
+						</table>
+					</form:form>
+		</div>
 			<!-- /content -->
 			<!-- footer -->
 			<footer>

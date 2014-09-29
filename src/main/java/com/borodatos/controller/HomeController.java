@@ -4,6 +4,8 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -53,4 +55,11 @@ public class HomeController {
         return "comics_edit";
     }
 	
+	@RequestMapping("/comics/save")
+	public String saveComics(@ModelAttribute("comics") ComicsArticle comics, BindingResult result) {
+		articleService.saveComics(comics);
+		
+		return "redirect:/admin/edit/" + comics.getLink();
+	}
+
 }

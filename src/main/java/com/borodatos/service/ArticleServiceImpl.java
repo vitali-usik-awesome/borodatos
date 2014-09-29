@@ -35,4 +35,10 @@ public class ArticleServiceImpl implements ArticleService {
 		return articleDAO.retriveUser(link);
 	}
 
+	@Transactional
+	public void saveComics(ComicsArticle comics) {
+		
+		articleDAO.saveComics(comics);
+	}
+
 }

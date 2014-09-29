@@ -34,4 +34,9 @@ public class ArticleDAO {
 		q.setString("link", link);
 		return (ComicsArticle) q.uniqueResult();
 	}
+
+	public void saveComics(ComicsArticle comics) {
+		sessionFactory.getCurrentSession().saveOrUpdate(comics);
+		
+	}
 }

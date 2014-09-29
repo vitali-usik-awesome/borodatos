@@ -14,4 +14,6 @@ public interface ArticleService {
 
 	public ComicsArticle retrieveComics(String link);
 
+	public void saveComics(ComicsArticle comics);
+
 }
