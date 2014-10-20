@@ -1,10 +1,16 @@
 package com.borodatos.model;
 
+import java.util.Collection;
+import java.util.HashSet;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 /**
  * @author Vitali Usik
@@ -12,11 +18,26 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "HUSERS")
-public class User {
+public class User implements UserDetails {
+
+    /**
+     * 
+     */
+    private static final long serialVersionUID = -1731069088815164013L;
 
     public User() {
     }
     
+    public User(Integer id, String name, String surname, String nickName, String password, String role) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.nickName = nickName;
+        this.password = password;
+        this.role = role;
+        this.setRoles(role);
+    }
+
     @Id
     @Column(name = "ID")
     @GeneratedValue
@@ -36,6 +57,8 @@ public class User {
     
     @Column(name = "USER_ROLE")
     private String role;
+    
+    private Collection<GrantedAuthority> authorities;
 
     public Integer getId() {
         return id;
@@ -84,5 +107,44 @@ public class User {
     public void setRole(String role) {
         this.role = role;
     }
+
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return this.authorities;
+    }
+
+    public String getUsername() {
+        return nickName;
+    }
+
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    public boolean isEnabled() {
+        return true;
+    }
     
+    public void setRoles(String roles) {
+        this.authorities = new HashSet<GrantedAuthority>();
+        for (final String role : roles.split(",")) {
+            if (role != null && !"".equals(role.trim())) {
+                GrantedAuthority grandAuthority = new GrantedAuthority() {
+                    private static final long serialVersionUID = 3958183417696804555L;
+
+                    public String getAuthority() {
+                        return role.trim();
+                    }
+                };
+                this.authorities.add(grandAuthority);
+            }
+        }
+    }
 }
