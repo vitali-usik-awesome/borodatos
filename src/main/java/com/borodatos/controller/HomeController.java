@@ -1,13 +1,18 @@
 package com.borodatos.controller;
 
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.Locale;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.borodatos.model.ComicsArticle;
 import com.borodatos.model.User;
@@ -77,8 +82,8 @@ public class HomeController {
         return "redirect:/";
     }
     
-    @RequestMapping("/huiadmin/huilogin")
-    public String huiLogin(@ModelAttribute("huser") User user, BindingResult result) {
+    @RequestMapping("/huiadmin")
+    public String huiLogin(/*@ModelAttribute("huser") User user, BindingResult result*/) {
         
         return "huser_login";    
     }

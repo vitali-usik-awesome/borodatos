@@ -68,22 +68,23 @@
 			<!-- /header -->
 			<!-- content -->
 			<div class="content">
-				<h3>Login</h3>
-					<form:form method="post" action="${pageContext.request.contextPath}/huser/check" commandName="huser">
-						<table>
-							<tr>
-								<td><form:label path="id">login</form:label></td>
-								<td><form:input path="nickName" /></td>
-							</tr>
-							<tr>
-								<td><form:label path="id">password</form:label></td>
-								<td><form:input path="password" /></td>
-							</tr>
-							<tr>
-								<td colspan="2"><input type="submit" value="Log in" /></td>
-							</tr>
-						</table>
-					</form:form>
+<!-- 				<h3>Login</h3> -->
+<%-- 					<form:form method="post" action="${pageContext.request.contextPath}/huser/check" commandName="huser"> --%>
+<!-- 						<table> -->
+<!-- 							<tr> -->
+<%-- 								<td><form:label path="id">login</form:label></td> --%>
+<%-- 								<td><form:input path="nickName" /></td> --%>
+<!-- 							</tr> -->
+<!-- 							<tr> -->
+<%-- 								<td><form:label path="id">password</form:label></td> --%>
+<%-- 								<td><form:input path="password" /></td> --%>
+<!-- 							</tr> -->
+<!-- 							<tr> -->
+<!-- 								<td colspan="2"><input type="submit" value="Log in" /></td> -->
+<!-- 							</tr> -->
+<!-- 						</table> -->
+<%-- 					</form:form> --%>
+				<h3>Hello, Admin!</h3>
 			</div>
 			<!-- /content -->
 			<!-- footer -->
