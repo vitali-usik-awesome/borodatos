@@ -1,6 +1,7 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://www.springframework.org/security/tags" prefix="sec"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf8">
@@ -93,9 +94,11 @@
 							<td>${comics.date}</td>
 							<td>${comics.link}</td>
 							<td>${comics.views}</td>
+							<sec:authorize access="hasRole('ROLE_ADMIN')">
 							<td><a href="${pageContext.request.contextPath}/admin/edit/${comics.link}">edit</a></td>
 							<td><a href="${pageContext.request.contextPath}/admin/add">add</a></td>
 							<td><a href="${pageContext.request.contextPath}/admin/delete/${comics.id}">delete</a></td>
+							</sec:authorize>
 						</tr>					
 					</table>		
 			</div>

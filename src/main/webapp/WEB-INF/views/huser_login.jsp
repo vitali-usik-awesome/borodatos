@@ -1,6 +1,8 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@taglib uri="http://www.springframework.org/security/tags" prefix="sec"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@page session="false"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf8">
@@ -85,7 +87,10 @@
 <!-- 						</table> -->
 <%-- 					</form:form> --%>
 				<h3>Hello, Admin!</h3>
-			</div>
+				<sec:authorize access="isAuthenticated()">
+					<a href="<c:url value="/j_spring_security_logout"/>">Logout</a>
+				</sec:authorize>
+		</div>
 			<!-- /content -->
 			<!-- footer -->
 			<footer>
