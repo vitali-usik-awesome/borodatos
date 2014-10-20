@@ -11,13 +11,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class SigninController {
 
-    @RequestMapping(value = "/signin", method = RequestMethod.GET)
+    @RequestMapping(value = "/husignin", method = RequestMethod.GET)
     public String signin() {
-        return "huser/signin";
+        return "huser/husignin";
     }
-    
-    @RequestMapping(value = "/signin-failure", method = RequestMethod.GET)
+
+    @RequestMapping(value = "/husignin-failure", method = RequestMethod.GET)
     public String signinFailure() {
-        return "huser/signin_failure";
+        return "huser/husignin_failure";
+    }
+
+    /**
+     * only for test with spring security, page huser_login contains only logout
+     * link
+     * 
+     * @return
+     */
+    @RequestMapping("/huiadmin")
+    public String huiLogin() {
+        return "huser_login";
     }
 }
