@@ -68,13 +68,13 @@
 			<!-- /header -->
 			<!-- content -->
 			<div class="content">
-				<h3>Comics</h3>	
+				<h3>Comics</h3>
 				<div class="test_comics_wrapper">			
 					<c:if test="${!empty listComics}">
 						<c:forEach items="${listComics}" var="comics">
 							<div class="test_comics_item">
 								<h4><a href="${pageContext.request.contextPath}/comics/${comics.link}">${comics.title}</a></h4>
-								<p>${comics.content}</p>
+								${comics.content}
 								<p>Author: ${comics.author}. Date: ${comics.date}. Views: ${comics.views}</p>
 							</div>	
 						</c:forEach>

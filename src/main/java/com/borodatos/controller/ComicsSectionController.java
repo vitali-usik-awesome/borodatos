@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.borodatos.model.ComicsArticle;
+import com.borodatos.model.ImageList;
 import com.borodatos.service.ArticleService;
+import com.borodatos.service.ImageService;
 
 /**
  * @author Vitali Usik
@@ -21,6 +23,9 @@ public class ComicsSectionController {
 
     @Autowired
     private ArticleService articleService;
+    
+    @Autowired
+    private ImageService imageService;
 
     @RequestMapping("/comics/{link}")
     public String comicsPage(@PathVariable("link") String link, Map<String, Object> map) {
@@ -36,6 +41,9 @@ public class ComicsSectionController {
 
         ComicsArticle comicsArticle = articleService.retrieveComics(link);
         map.put("comics", comicsArticle);
+        
+        map.put("images", new ImageList());
+        map.put("listImages", imageService.listImages());
 
         return "comics_edit";
     }
@@ -48,8 +56,11 @@ public class ComicsSectionController {
     }
 
     @RequestMapping("/admin/add")
-    public String addComicsArticle(@ModelAttribute("comics") ComicsArticle comics, BindingResult result) {
+    public String addComicsArticle(@ModelAttribute("comics") ComicsArticle comics, BindingResult result, Map<String, Object> map) {
 
+        map.put("images", new ImageList());
+        map.put("listImages", imageService.listImages());
+        
         return "comics_edit";
     }
 

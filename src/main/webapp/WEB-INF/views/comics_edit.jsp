@@ -69,46 +69,51 @@
 			<!-- content -->
 			<div class="content">
 				<h3>Comics</h3>
-					<form:form method="post" action="${pageContext.request.contextPath}/comics/save" commandName="comics">
-						<table>
-							<tr>
-								<td><form:label path="id">id</form:label></td>
-								<td><form:input path="id" /></td>
-							</tr>
-							<tr>
-								<td><form:label path="id">title</form:label></td>
-								<td><form:input path="title" /></td>
-							</tr>
-							<tr>
-								<td><form:label path="id">brief</form:label></td>
-								<td><form:input path="brief" /></td>
-							</tr>
-							<tr>
-								<td><form:label path="id">content</form:label></td>
-								<td><form:input path="content" /></td>
-							</tr>
-							<tr>
-								<td><form:label path="id">author</form:label></td>
-								<td><form:input path="author" /></td>
-							</tr>
-							<tr>
-								<td><form:label path="id">date</form:label></td>
-								<td><form:input path="date" /></td>
-							</tr>
-							<tr>
-								<td><form:label path="id">link</form:label></td>
-								<td><form:input path="link" /></td>
-							</tr>
-							<tr>
-								<td><form:label path="id">views</form:label></td>
-								<td><form:input path="views" /></td>
-							</tr>
-							<tr>
-								<td colspan="2"><input type="submit" value="Save" /></td>
-							</tr>
-						</table>
-					</form:form>
-		</div>
+				<form:form method="post" action="${pageContext.request.contextPath}/comics/save" commandName="comics">
+					<table>
+						<tr>
+							<td><form:label path="id">id</form:label></td>
+							<td><form:input path="id" /></td>
+						</tr>
+						<tr>
+							<td><form:label path="id">title</form:label></td>
+							<td><form:input path="title" /></td>
+						</tr>
+						<tr>
+							<td><form:label path="id">brief</form:label></td>
+							<td><form:input path="brief" /></td>
+						</tr>
+						<tr>
+							<td><form:label path="id">content</form:label></td>
+							<td><form:textarea rows="10" cols="150" path="content" /></td>
+						</tr>
+						<tr>
+							<td><form:label path="id">author</form:label></td>
+							<td><form:input path="author" /></td>
+						</tr>
+						<tr>
+							<td><form:label path="id">date</form:label></td>
+							<td><form:input path="date" /></td>
+						</tr>
+						<tr>
+							<td><form:label path="id">link</form:label></td>
+							<td><form:input path="link" /></td>
+						</tr>
+						<tr>
+							<td><form:label path="id">views</form:label></td>
+							<td><form:input path="views" /></td>
+						</tr>
+						<tr>
+							<td colspan="2"><input class="submit_button" type="submit" value="Save" /></td>
+						</tr>
+					</table>
+				</form:form>
+				<c:if test="${!empty listImages}">
+					<c:forEach items="${listImages}" var="images">
+						<p>${images.imageDate} - ${images.imageLink} - ${images.link}</p>
+					</c:forEach>
+				</c:if>
+			</div>
 			<!-- /content -->
 			<!-- footer -->
 			<footer>
