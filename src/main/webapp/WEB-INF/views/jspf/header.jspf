@@ -1,0 +1,35 @@
+<header>
+	<!-- hLogo -->
+	<div class="hLogo">
+		<a href="${pageContext.request.contextPath}" class="logo"> <img
+			src="${pageContext.request.contextPath}/resources/img/boro_logo_test.png"
+			alt="logo" />
+		</a>
+		<div class="search">
+			<input type="search" placeholder="Search" />
+		</div>
+		<div class="social clr">
+			<ul>
+				<li><a href="#">vk</a></li>
+				<li><a href="#">fb</a></li>
+				<li><a href="#">twi</a></li>
+				<li><a href="#">ins</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- /hLogo -->
+	<!-- nav -->
+	<nav class="clearfix">
+		<ul class="clearfix">
+			<li><a href="${pageContext.request.contextPath}">home</a></li>
+			<li><a href="#">comics</a></li>
+			<li><a href="#">music</a></li>
+			<li><a href="#">games</a></li>
+			<li><a href="#">copyright</a></li>
+			<li><a href="#">mission</a></li>
+			<li><a href="#">contacts</a></li>
+		</ul>
+		<a href="#" id="pull">Menu</a>
+	</nav>
+	<!-- /nav -->
+</header>

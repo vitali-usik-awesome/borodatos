@@ -50,7 +50,7 @@ nav {height: 40px; width: 100%; background: #fff; font-size: 1.2em; font-weight:
 /* only in java project */
 .test_comics_wrapper {width: 100%; overflow: hidden;}
 	.test_comics_item {max-width: 590px; width: 49%; float: left; margin: 0 0.3em 1.5em 0.3em;}
-.content form input {width: 1069px;}
+.content form .edit input {width: 1069px;}
 .content .submit_button {width: 150px;}	
 
 /* popular */

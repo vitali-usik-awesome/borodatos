@@ -31,100 +31,27 @@
 <body>
 	<div class="wrapper">
 		<!-- header -->
-			<header>
-				<!-- hLogo -->
-				<div class="hLogo">
-					<a href="${pageContext.request.contextPath}" class="logo">
-						<img src="${pageContext.request.contextPath}/resources/img/boro_logo_test.png" alt="logo" />
-					</a>
-					<div class="search">
-						<input type="search" placeholder="Search" />
-					</div>
-					<div class="social clr">
-						<ul>
-							<li><a href="#">vk</a></li>
-							<li><a href="#">fb</a></li>
-							<li><a href="#">twi</a></li>
-							<li><a href="#">ins</a></li>
-						</ul>
-					</div>
-				</div>
-				<!-- /hLogo -->
-				<!-- nav -->
-				<nav class="clearfix">  
-    				<ul class="clearfix">  
-     					<li><a href="${pageContext.request.contextPath}">home</a></li>
-						<li><a href="#">comics</a></li>
-						<li><a href="#">music</a></li>
-						<li><a href="#">games</a></li>
-						<li><a href="#">copyright</a></li>
-						<li><a href="#">mission</a></li>
-						<li><a href="#">contacts</a></li>  
-   					 </ul>  
-    				<a href="#" id="pull">Menu</a>  
-				</nav>
-				<!-- /nav -->
-			</header>
-			<!-- /header -->
-			<!-- content -->
-			<div class="content">
-				<h3>Comics</h3>
-				<div class="test_comics_wrapper">			
-					<c:if test="${!empty listComics}">
-						<c:forEach items="${listComics}" var="comics">
-							<div class="test_comics_item">
-								<h4><a href="${pageContext.request.contextPath}/comics/${comics.link}">${comics.title}</a></h4>
-								${comics.content}
-								<p>Author: ${comics.author}. Date: ${comics.date}. Views: ${comics.views}</p>
-							</div>	
-						</c:forEach>
-					</c:if>
-				</div>
+		<%@ include file="jspf/header.jspf" %>	
+		<!-- /header -->
+		<!-- content -->
+		<div class="content">
+			<h3>Comics</h3>
+			<div class="test_comics_wrapper">			
+				<c:if test="${!empty listComics}">
+					<c:forEach items="${listComics}" var="comics">
+						<div class="test_comics_item">
+							<h4><a href="${pageContext.request.contextPath}/comics/${comics.link}">${comics.title}</a></h4>
+							${comics.content}
+							<p>Author: ${comics.author}. Date: ${comics.date}. Views: ${comics.views}</p>
+						</div>	
+					</c:forEach>
+				</c:if>
 			</div>
-			<!-- /content -->
-			<!-- footer -->
-			<footer>
-				<div class="footer_column">
-					<ul>
-						<li><a href="#">comics</a></li>
-						<li><a href="#">music</a></li>
-						<li><a href="#">games</a></li>
-					</ul>
-				</div>
-				<div class="footer_column">
-					<ul>
-						<li><a href="#">comics</a></li>
-						<li><a href="#">music</a></li>
-						<li><a href="#">games</a></li>
-					</ul>
-				</div>
-				<div class="footer_column">
-					<ul>
-						<li><a href="#">comics</a></li>
-						<li><a href="#">music</a></li>
-						<li><a href="#">games</a></li>
-					</ul>
-				</div>
-				<div class="footer_column">
-					<a href="#" class="">
-						<img src="${pageContext.request.contextPath}/resources/img/borodatos_footer.png" alt="logo" />
-					</a>
-				</div>
-				<div class="footer_column clr">
-					<div class="f_social">
-						<ul>
-							<li><a href="#">vk</a></li>
-							<li><a href="#">fb</a></li>
-							<li><a href="#">twi</a></li>
-							<li><a href="#">ins</a></li>
-						</ul>
-					</div>
-					<div class="f_copyright">
-						<p>(c) Borodatos<br /> All rights reserved</p>
-					</div>
-				</div>
-			</footer>
-			<!-- /footer -->
+		</div>
+		<!-- /content -->
+		<!-- footer -->
+		<%@ include file="jspf/footer.jspf" %>	
+		<!-- /footer -->
 	</div>
 </body>
 </html>
