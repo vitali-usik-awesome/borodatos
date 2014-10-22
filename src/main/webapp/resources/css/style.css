@@ -46,12 +46,36 @@ nav {height: 40px; width: 100%; background: #fff; font-size: 1.2em; font-weight:
 	nav a#pull {display: none;}
 
 /* content */
-.content {background: #fff; width: 100%; padding-top: 2em;}
+.content {background: #fff; width: 100%; padding-top: 1em;}
 /* only in java project */
 .test_comics_wrapper {width: 100%; overflow: hidden;}
-	.test_comics_item {max-width: 590px; width: 49%; float: left; margin: 0 0.3em 1.5em 0.3em;}
-.content form .edit input {width: 1069px;}
-.content .submit_button {width: 150px;}	
+	.test_comics_item {max-width: 590px; width: 32%; float: left; margin: 0 0.3em 1.5em 0.3em;}
+	.test_comics_item a {text-decoration: none; color: gray;}
+	.test_comics_item a:hover {text-decoration: underline;}
+.content .submit_button {width: 150px;}
+.content .main_banner {text-align: center;}
+
+.content .comics_page {margin: 1em 5em;}
+	.comics_page p {margin: 0.5em 0;}
+	.comics_page img {max-width: 100%;}
+	.comics_page .admin_options a {text-decoration: none; color: gray; margin: 0 0.5em;}
+	.comics_page .admin_options a:hover {text-decoration: underline;}
+	
+.content .signin {margin: 0 auto; padding: 1em 0; width: 300px;}
+	.signin h2 {text-align: center;}
+	.signin input {width: 290px; height: 30px; margin: 0.5em 0;}
+	.signin .sign_submit {cursor: pointer;}
+	
+.content .comics_edit {margin: 1em 5em;}
+	.comics_edit input {width: 930px; height: 30px; margin: 0.5em 0;}
+
+.image_list {border: 1px solid gray;}
+.image_list p {margin: 0.3em; line-height: 30px;}
+.image_list img {height: 30px;}
+
+.content .img_upload {margin: 1em 5em;}
+	.img_upload form {border: 1px solid gray; margin-bottom: 0.5em;}
+	.img_upload tr {height: 40px;}
 
 /* popular */
 .popular_wrapper {width: 100%;}

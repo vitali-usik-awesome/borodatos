@@ -35,6 +35,7 @@
 		<!-- /header -->
 		<!-- content -->
 		<div class="content">
+			<div class="comics_edit">
 			<h3>Comics</h3>
 			<form:form method="post" action="${pageContext.request.contextPath}/comics/save" commandName="comics" class="edit">
 				<table>
@@ -52,7 +53,7 @@
 					</tr>
 					<tr>
 						<td><form:label path="id">content</form:label></td>
-						<td><form:textarea rows="10" cols="150" path="content" /></td>
+						<td><form:textarea rows="10" cols="130" path="content" /></td>
 					</tr>
 					<tr>
 						<td><form:label path="id">author</form:label></td>
@@ -75,11 +76,20 @@
 					</tr>
 				</table>
 			</form:form>
-			<c:if test="${!empty listImages}">
-				<c:forEach items="${listImages}" var="images">
-					<p>${images.imageDate} - ${images.imageLink} - ${images.link}</p>
-				</c:forEach>
-			</c:if>
+			<div class="image_list">
+				<c:if test="${!empty listImages}">
+					<c:forEach items="${listImages}" var="images">
+						
+						<table>
+							<tr>
+								<td><img src="${images.link}" /></td>
+								<td>${images.imageDate} - <i>${images.link}</i></td>
+							</tr>
+						</table>
+					</c:forEach>
+				</c:if>
+			</div>
+			</div>
 		</div>
 		<!-- /content -->
 		<!-- footer -->

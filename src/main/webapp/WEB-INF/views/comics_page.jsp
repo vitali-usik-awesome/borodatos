@@ -36,37 +36,20 @@
 		<!-- /header -->
 		<!-- content -->
 		<div class="content">
-			<h3>Comics</h3>			
-			<table>
-				<tr>
-					<th>id</th>
-					<th>title</th>
-					<th>brief</th>
-					<th>content</th>
-					<th>author</th>
-					<th>date</th>
-					<th>link</th>
-					<th>views</th>
-					<th>action</th>
-					<th>action2</th>
-					<th>action3</th>
-				</tr>
-				<tr>
-					<td>${comics.id}</td>
-					<td>${comics.title}</td>
-					<td>${comics.brief}</td>
-					<td>${comics.content}</td>
-					<td>${comics.author}</td>
-					<td>${comics.date}</td>
-					<td>${comics.link}</td>
-					<td>${comics.views}</td>
-					<sec:authorize access="hasRole('ROLE_ADMIN')">
-					<td><a href="${pageContext.request.contextPath}/admin/edit/${comics.link}">edit</a></td>
-					<td><a href="${pageContext.request.contextPath}/admin/add">add</a></td>
-					<td><a href="${pageContext.request.contextPath}/admin/delete/${comics.id}">delete</a></td>
-					</sec:authorize>
-				</tr>					
-			</table>		
+			<div class="comics_page">
+				<h2>${comics.title}</h2>
+				<p><b>Author:</b> ${comics.author}. <b>Date:</b> ${comics.date}. <b>Views:</b> ${comics.views}</p>
+				${comics.content}
+				<sec:authorize access="hasRole('ROLE_ADMIN')">
+				<div class="admin_options">
+					<p><b>Admin Options:</b>
+						<a href="${pageContext.request.contextPath}/admin/edit/${comics.link}">edit</a>
+						<a href="${pageContext.request.contextPath}/admin/add">add</a>
+						<a href="${pageContext.request.contextPath}/admin/delete/${comics.id}">delete</a>
+					</p>
+				</div>
+				</sec:authorize>
+			</div>			
 		</div>
 		<!-- /content -->
 		<!-- footer -->

@@ -36,17 +36,17 @@
 		<!-- /header -->
 		<!-- content -->
 		<div class="content">
-			<h1>Spring Security - Sign In</h1>
+			<div class="signin">
+			<h2>Sign In</h2>
 			<div style="color: red">${message}</div>	
 			<form class="login-form" action="j_spring_security_check" method="post">
-				<label for="j_username">Username: </label>
-		 		<input id="j_username" name="j_username" size="20" maxlength="50" type="text" />
-
-				<label for="j_password">Password: </label>
-				<input id="j_password" name="j_password" size="20" maxlength="50" type="password" />
-			
-				<input type="submit" value="Login" />
+		 		<input id="j_username" name="j_username" size="20" maxlength="50" type="text" placeholder="Username" />
+				
+				<input id="j_password" name="j_password" size="20" maxlength="50" type="password" placeholder="Password" />
+				
+				<input type="submit" value="Login" class="sign_submit" />
 			</form>
+			</div>
 		</div>
 		<!-- /content -->
 		<!-- footer -->

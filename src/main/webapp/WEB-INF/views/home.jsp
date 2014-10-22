@@ -35,14 +35,25 @@
 		<!-- /header -->
 		<!-- content -->
 		<div class="content">
-			<h3>Comics</h3>
+			<div class="main_banner">
+				<a href="#">
+					<img src="http://localhost:8080/borodatos/resources/pic/main_banner.jpg" alt="rp_banner" />
+				</a>
+			</div>
+			<div class="content_section_wrapper">
+				<div class="section_header">
+					<div class="section_head_name">
+						<a href="#">Comics</a>
+					</div>
+				</div>
+			</div>
 			<div class="test_comics_wrapper">			
 				<c:if test="${!empty listComics}">
 					<c:forEach items="${listComics}" var="comics">
 						<div class="test_comics_item">
 							<h4><a href="${pageContext.request.contextPath}/comics/${comics.link}">${comics.title}</a></h4>
-							${comics.content}
-							<p>Author: ${comics.author}. Date: ${comics.date}. Views: ${comics.views}</p>
+							${comics.brief}
+							<p><b>Author:</b> ${comics.author}. <b>Date:</b> ${comics.date}. <b>Views:</b> ${comics.views}</p>
 						</div>	
 					</c:forEach>
 				</c:if>

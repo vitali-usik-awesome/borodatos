@@ -34,26 +34,34 @@
 		<!-- /header -->
 		<!-- content -->
 		<div class="content">
-			<h2>New Person Form</h2>
+			<div class="img_upload">
 			<sf:form method="POST" modelAttribute="person" action="${pageContext.request.contextPath}/imgUp" enctype="multipart/form-data">
-			<fieldset>
+
 				<table>
 					<tr>
 						<th><label for="image">Image (in JPEG format only):</label></th>
 						<td><input name="image" type="file" />
 					</tr>
 					<tr>
-						<th><input type="Submit" value="Submit" /></th>
-						<td></td>
+						<th><!--  --></th>
+						<td><input type="Submit" value="Submit" /></td>
 					</tr>
 				</table>
-			</fieldset>
+
 			</sf:form>	
-			<c:if test="${!empty listImages}">
-				<c:forEach items="${listImages}" var="images">			
-					<p>${images.imageDate} - ${images.imageLink} - ${images.link}</p>			
-				</c:forEach>
-			</c:if>
+			<div class="image_list">
+				<c:if test="${!empty listImages}">
+					<c:forEach items="${listImages}" var="images">		
+						<table>
+							<tr>
+								<td><img src="${images.link}" /></td>
+								<td>${images.imageDate} - <i>${images.link}</i></td>
+							</tr>
+						</table>
+					</c:forEach>
+				</c:if>
+			</div>
+			</div>
 		</div>
 		<!-- /content -->
 		<!-- footer -->
