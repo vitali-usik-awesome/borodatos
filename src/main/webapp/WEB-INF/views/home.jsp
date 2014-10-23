@@ -1,6 +1,7 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf8">
@@ -43,7 +44,7 @@
 			<div class="content_section_wrapper">
 				<div class="section_header">
 					<div class="section_head_name">
-						<a href="#">Comics</a>
+						<a href="#">Комиксы</a>
 					</div>
 				</div>
 			</div>

@@ -11,7 +11,7 @@
           p:location="/WEB-INF/db/jdbc.properties" />
 
     <bean id="dataSource"
-          class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource"
           p:driverClassName="${jdbc.driverClassName}"
           p:url="${jdbc.databaseurl}" p:username="${jdbc.username}"
           p:password="${jdbc.password}" />
@@ -29,6 +29,9 @@
             <props>
                 <prop key="hibernate.dialect">${jdbc.dialect}</prop>
                 <prop key="hibernate.show_sql">${jdbc.show_sql}</prop>
+                <prop key="hibernate.connection.CharSet">utf8</prop>
+        		<prop key="hibernate.connection.characterEncoding">utf8</prop>
+        		<prop key="hibernate.connection.useUnicode">true</prop>
             </props>
         </property>
     </bean>

@@ -102,4 +102,5 @@ public class ComicsArticle {
     public void setViews(Integer views) {
         this.views = views;
     }
+    
 }
