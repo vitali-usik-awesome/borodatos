@@ -37,6 +37,7 @@ public class ComicsArticle {
     private String link;
 
     @Column(name = "VIEWS")
+    @GeneratedValue
     private Integer views;
 
     public Integer getId() {

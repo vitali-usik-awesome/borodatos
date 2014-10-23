@@ -37,7 +37,10 @@ public class ArticleServiceImpl implements ArticleService {
 
 	@Transactional
 	public void saveComics(ComicsArticle comics) {
-		
+	    if (comics.getViews() == null) {
+            comics.setViews(0);
+        }
+	    
 		articleDAO.saveComics(comics);
 	}
 

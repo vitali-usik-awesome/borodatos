@@ -41,6 +41,7 @@ public class ArticleDAO {
 	}
 
 	public void saveComics(ComicsArticle comics) {
+	    
 		sessionFactory.getCurrentSession().saveOrUpdate(comics);
 		
 	}

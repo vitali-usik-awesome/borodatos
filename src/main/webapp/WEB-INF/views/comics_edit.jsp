@@ -41,8 +41,8 @@
 			<form:form method="post" action="${pageContext.request.contextPath}/comics/save" commandName="comics" class="edit">
 				<table>
 					<tr>
-						<td><form:label path="id">id</form:label></td>
-						<td><form:input path="id" /></td>
+						<td><!-- id --></td>
+						<td><form:input path="id" type="hidden" /></td>
 					</tr>
 					<tr>
 						<td><form:label path="id">title</form:label></td>
@@ -70,7 +70,12 @@
 					</tr>
 					<tr>
 						<td><form:label path="id">views</form:label></td>
-						<td><form:input path="views" /></td>
+						<td>
+							<form:input path="views" disabled="true"/>
+							<c:if test="${empty comicsList }">
+								ololo
+							</c:if>
+						</td>
 					</tr>
 					<tr>
 						<td colspan="2"><input class="submit_button" type="submit" value="Save" /></td>

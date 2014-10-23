@@ -32,9 +32,7 @@ public class ComicsSectionController {
 
         ComicsArticle comicsArticle = articleService.retrieveComics(link);
         map.put("comics", comicsArticle);
-        System.out.println(comicsArticle.getTitle() + " " + comicsArticle.getId());
-        comicsArticle.setTitle("Новый хороший тайтл на русском языке");
-        System.out.println(comicsArticle.getTitle() + " " + comicsArticle.getId());
+        
         return "comics_page";
     }
 
