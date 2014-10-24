@@ -51,6 +51,11 @@
 		<url-pattern>*.jpg</url-pattern>
 	</servlet-mapping>
 
+	<error-page>
+		<error-code>404</error-code>
+		<location>/errors/404.html</location>
+	</error-page>
+	
 	<filter>
     	<filter-name>CharacterEncodingFilter</filter-name>
     	<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
