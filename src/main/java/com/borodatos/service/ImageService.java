@@ -15,7 +15,8 @@ import com.borodatos.model.ImageList;
 @Service
 public class ImageService {
     
-    private static final String LOCAL_HARDCODE_LINK = "C:/Users/Vitali_Usik/workspace/borodatos/src/main/webapp/resources/pic";
+    //private static final String LOCAL_HARDCODE_LINK = "C:/Users/Vitali_Usik/workspace/borodatos/src/main/webapp/resources/pic";
+    private static final String LOCAL_HARDCODE_LINK = "/Users/macbook/Documents/workspace/borodatos/src/main/webapp/resources/pic";
     private static final String BORO_HARDCODE_LINK = "http://localhost:8080/borodatos/resources/pic/";
     
     public List<ImageList> listImages() {
