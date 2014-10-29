@@ -1,5 +1,6 @@
 package com.borodatos.service;
 
+import java.sql.Date;
 import java.util.List;
 
 import org.apache.commons.logging.Log;
@@ -40,6 +41,10 @@ public class ArticleServiceImpl implements ArticleService {
 	    if (comics.getViews() == null) {
             comics.setViews(0);
         }
+	    if (comics.getDate() == null) {
+	        Date date = new Date(System.currentTimeMillis());
+	        comics.setDate(date);
+	    }
 	    
 		articleDAO.saveComics(comics);
 	}

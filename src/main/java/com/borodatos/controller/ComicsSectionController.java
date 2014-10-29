@@ -20,7 +20,7 @@ import com.borodatos.service.ImageService;
  */
 @Controller
 public class ComicsSectionController {
-
+    
     @Autowired
     private ArticleService articleService;
     

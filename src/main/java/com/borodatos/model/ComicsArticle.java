@@ -1,5 +1,7 @@
 package com.borodatos.model;
 
+import java.sql.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -31,7 +33,7 @@ public class ComicsArticle {
     private String author;
 
     @Column(name = "DATE")
-    private String date;
+    private Date date;
 
     @Column(name = "LINK")
     private String link;
@@ -80,11 +82,11 @@ public class ComicsArticle {
         this.author = author;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
@@ -103,5 +105,5 @@ public class ComicsArticle {
     public void setViews(Integer views) {
         this.views = views;
     }
-    
+
 }

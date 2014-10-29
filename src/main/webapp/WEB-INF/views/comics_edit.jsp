@@ -1,6 +1,7 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@page import="java.util.Date"%>
 <%@page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -59,10 +60,6 @@
 					<tr>
 						<td><form:label path="id">author</form:label></td>
 						<td><form:input path="author" /></td>
-					</tr>
-					<tr>
-						<td><form:label path="id">date</form:label></td>
-						<td><form:input path="date" /></td>
 					</tr>
 					<tr>
 						<td><form:label path="id">link</form:label></td>
