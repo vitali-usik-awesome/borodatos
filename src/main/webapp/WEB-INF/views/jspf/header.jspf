@@ -1,35 +1,43 @@
-<header>
-	<!-- hLogo -->
-	<div class="hLogo">
-		<a href="${pageContext.request.contextPath}" class="logo"> <img
-			src="${pageContext.request.contextPath}/resources/img/boro_logo_test.png"
-			alt="logo" />
-		</a>
-		<div class="search">
-			<input type="search" placeholder="Search" />
+<%@page contentType="text/html;charset=UTF-8" language="java" %>
+<!-- header -->
+	<header>
+		<div class="logo_wrapper">
+			<div class="logo">
+				<a href="${pageContext.request.contextPath}">
+					<img src="${pageContext.request.contextPath}/resources/img/borodatos_logo.png" alt="borodatos_logo" title="borodatos_logo" />
+				</a>
+			</div>
+			<div class="social">
+				<ul>
+					<li>
+						<a href="https://vk.com/borodatos" class="vk"><!-- --></a>
+					</li>
+					<li>
+						<a href="https://vk.com/borodatos" class="fb"><!-- --></a>
+					</li>
+					<li>
+						<a href="https://vk.com/borodatos" class="tw"><!-- --></a>
+					</li>
+					<li>
+						<a href="https://vk.com/borodatos" class="in"><!-- --></a>
+					</li>
+				</ul>
+			</div>
+			<div class="search clr">
+				<input placeholder="Поиск">
+			</div>
 		</div>
-		<div class="social clr">
-			<ul>
-				<li><a href="#">vk</a></li>
-				<li><a href="#">fb</a></li>
-				<li><a href="#">twi</a></li>
-				<li><a href="#">ins</a></li>
-			</ul>
-		</div>
-	</div>
-	<!-- /hLogo -->
-	<!-- nav -->
-	<nav class="clearfix">
-		<ul class="clearfix">
-			<li><a href="${pageContext.request.contextPath}">home</a></li>
-			<li><a href="#">comics</a></li>
-			<li><a href="#">music</a></li>
-			<li><a href="#">games</a></li>
-			<li><a href="#">copyright</a></li>
-			<li><a href="#">mission</a></li>
-			<li><a href="#">contacts</a></li>
-		</ul>
-		<a href="#" id="pull">Menu</a>
-	</nav>
-	<!-- /nav -->
-</header>
+		<nav class="clr">
+			<ul class="clr">  
+	     		<li><a href="${pageContext.request.contextPath}">home</a></li>
+				<li><a href="#">комиксы</a></li>
+				<li><a href="#">музыка</a></li>
+				<li><a href="#">игры</a></li>
+				<li><a href="#">копирайт</a></li>
+				<li><a href="#">миссия</a></li>
+				<li><a href="#">контакты</a></li>  
+	   		 </ul>  
+	    	<a href="#" id="pull">Menu</a>
+		</nav>
+	</header>
+<!-- /header -->
