@@ -28,14 +28,14 @@ header {width: 100%;}
 			.social li {display: inline-block; margin-right: 1em;}
 			.social li:last-child {margin-right: 0;}
 			.social li a {display: block; position: relative; width: 30px; height: 30px;}
-			.social .vk {background: url(../img/social_default.png) 0 0 no-repeat;}
-			.social .fb {background: url(../img/social_default.png) 0 -60px no-repeat;}
-			.social .tw {background: url(../img/social_default.png) 0 -121px no-repeat;}
-			.social .in {background: url(../img/social_default.png) 0 -181px no-repeat;}
-			.social .vk:hover {background: url(../img/social_active.png) 0 0 no-repeat;}
-			.social .fb:hover {background: url(../img/social_active.png) 0 -60px no-repeat;}
-			.social .tw:hover {background: url(../img/social_active.png) 0 -121px no-repeat;}
-			.social .in:hover {background: url(../img/social_active.png) 0 -181px no-repeat;}
+			.social .vk {background: url(../img/social_sprite.png) 0 0 no-repeat;}
+ 			.social .fb {background: url(../img/social_sprite.png) 0 -60px no-repeat;}
+			.social .tw {background: url(../img/social_sprite.png) 0 -120px no-repeat;}
+			.social .in {background: url(../img/social_sprite.png) 0 -180px no-repeat;}
+			.social .vk:hover {background: url(../img/social_sprite.png) -59px 0 no-repeat;}
+			.social .fb:hover {background: url(../img/social_sprite.png) -59px -60px no-repeat;}
+			.social .tw:hover {background: url(../img/social_sprite.png) -59px -120px no-repeat;}
+			.social .in:hover {background: url(../img/social_sprite.png) -59px -180px no-repeat;}
 		.search {display: block; position: relative; float: right; margin: 5em 2.5em 0 0;}
 			.search input {height: 19px; line-height: 19px; font-size: 15px; border: 1px solid #c2c2c2; padding-left: 10px; font-family: "HeliosCondC", sans-serif; width: 160px;}
 
@@ -129,14 +129,14 @@ footer {width: 100%; border-top: 1px solid #c2c2c2;}
 			.footer_social li {display: inline-block; margin-right: 1em;}
 			.footer_social li:last-child {margin-right: 0;}
 			.footer_social li a {display: block; position: relative; width: 30px; height: 30px;}
-			.footer_social .vk {background: url(../img/social_default.png) 0 0 no-repeat;}
-			.footer_social .fb {background: url(../img/social_default.png) 0 -60px no-repeat;}
-			.footer_social .tw {background: url(../img/social_default.png) 0 -121px no-repeat;}
-			.footer_social .in {background: url(../img/social_default.png) 0 -181px no-repeat;}
-			.footer_social .vk:hover {background: url(../img/social_active.png) 0 0 no-repeat;}
-			.footer_social .fb:hover {background: url(../img/social_active.png) 0 -60px no-repeat;}
-			.footer_social .tw:hover {background: url(../img/social_active.png) 0 -121px no-repeat;}
-			.footer_social .in:hover {background: url(../img/social_active.png) 0 -181px no-repeat;}
+			.footer_social .vk {background: url(../img/social_sprite.png) 0 0 no-repeat;}
+			.footer_social .fb {background: url(../img/social_sprite.png) 0 -60px no-repeat;}
+			.footer_social .tw {background: url(../img/social_sprite.png) 0 -120px no-repeat;}
+			.footer_social .in {background: url(../img/social_sprite.png) 0 -180px no-repeat;}
+			.footer_social .vk:hover {background: url(../img/social_sprite.png) -59px 0 no-repeat;}
+			.footer_social .fb:hover {background: url(../img/social_sprite.png) -59px -60px no-repeat;}
+			.footer_social .tw:hover {background: url(../img/social_sprite.png) -59px -120px no-repeat;}
+			.footer_social .in:hover {background: url(../img/social_sprite.png) -59px -180px no-repeat;}
 
 /* only in java project */
 .test_comics_wrapper {width: 100%; overflow: hidden;}
