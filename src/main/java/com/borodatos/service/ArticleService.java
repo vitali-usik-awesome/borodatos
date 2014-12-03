@@ -2,6 +2,7 @@ package com.borodatos.service;
 
 import java.util.List;
 
+import com.borodatos.model.Article;
 import com.borodatos.model.ComicsArticle;
 
 /**
@@ -17,5 +18,7 @@ public interface ArticleService {
 	public void saveComics(ComicsArticle comics);
 
 	public void removeComics(Integer id);
+
+    public List<Article> listPopular();
 
 }

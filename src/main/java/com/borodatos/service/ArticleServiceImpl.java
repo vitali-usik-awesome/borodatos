@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.borodatos.dao.ArticleDAO;
+import com.borodatos.model.Article;
 import com.borodatos.model.ComicsArticle;
 
 /**
@@ -54,5 +55,12 @@ public class ArticleServiceImpl implements ArticleService {
 		
 		articleDAO.removeComics(id);
 	}
+
+	// collects popular articles
+	@Transactional
+    public List<Article> listPopular() {
+        
+        return articleDAO.listPopular();
+    }
 
 }
