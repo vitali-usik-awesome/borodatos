@@ -23,23 +23,8 @@ public class ArticleDAO {
 	
 	@Autowired
     private SessionFactory sessionFactory;
-	
-	@SuppressWarnings("unchecked")
-	public List<ComicsArticle> listComics() {
-		return sessionFactory.getCurrentSession().createQuery("from ComicsArticle").list();
-	}
 
-	public ComicsArticle retriveComics(String link) {
-		ComicsArticle comicsArticle = null;
-		Query q = sessionFactory.getCurrentSession().createQuery("from ComicsArticle where link = :link");
-		q.setString("link", link);
-		comicsArticle = (ComicsArticle) q.uniqueResult();
-		Integer viewPlus = comicsArticle.getViews() + 1;
-		comicsArticle.setViews(viewPlus);
-		sessionFactory.getCurrentSession().saveOrUpdate(comicsArticle);
-		
-		return comicsArticle;
-	}
+	
 
 	public void saveComics(ComicsArticle comics) {
 	    
@@ -56,9 +41,36 @@ public class ArticleDAO {
 		
 	}
 
+	/**
+	 * @return
+	 */
 	@SuppressWarnings("unchecked")
     public List<Article> listPopular() {
         
         return sessionFactory.getCurrentSession().createQuery("FROM Article WHERE priority = 'pop' ORDER BY date DESC").setMaxResults(5).list();
+    }
+	
+	/**
+	 * @return
+	 */
+	@SuppressWarnings("unchecked")
+    public List<ComicsArticle> listComics() {
+        return sessionFactory.getCurrentSession().createQuery("FROM Article WHERE section = 'comics' ORDER BY date DESC").setMaxResults(5).list();
+    }
+	
+	/**
+	 * @param link
+	 * @return
+	 */
+	public Article retriveComics(String link) {
+        Article article = null;
+        Query q = sessionFactory.getCurrentSession().createQuery("FROM Article WHERE link = :link");
+        q.setString("link", link);
+        article = (Article) q.uniqueResult();
+        Integer viewPlus = article.getViews() + 1;
+        article.setViews(viewPlus);
+        sessionFactory.getCurrentSession().saveOrUpdate(article);
+        
+        return article;
     }
 }

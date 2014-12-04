@@ -23,11 +23,10 @@ public class HomeController {
     @RequestMapping("/")
     public String homePage(Map<String, Object> map) {
 
-        map.put("comics", new ComicsArticle());
-        map.put("listComics", articleService.listComics());
-        // TODO realization for music and games section similarly to comics
         map.put("popular", new Article());
         map.put("listPopular", articleService.listPopular());
+        map.put("comics", new ComicsArticle());
+        map.put("listComics", articleService.listComics());
 
         return "home";
     }

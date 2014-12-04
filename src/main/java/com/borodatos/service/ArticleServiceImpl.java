@@ -24,18 +24,6 @@ public class ArticleServiceImpl implements ArticleService {
 
 	@Autowired
 	private ArticleDAO articleDAO;
-	
-	@Transactional
-	public List<ComicsArticle> listComics() {
-		
-		return articleDAO.listComics();
-	}
-
-	@Transactional
-	public ComicsArticle retrieveComics(String link) {
-		
-		return articleDAO.retriveComics(link);
-	}
 
 	@Transactional
 	public void saveComics(ComicsArticle comics) {
@@ -57,10 +45,33 @@ public class ArticleServiceImpl implements ArticleService {
 	}
 
 	// collects popular articles
+	/* (non-Javadoc)
+	 * @see com.borodatos.service.ArticleService#listPopular()
+	 */
 	@Transactional
     public List<Article> listPopular() {
         
         return articleDAO.listPopular();
+    }
+	
+	// colect latest comics articles
+	/* (non-Javadoc)
+	 * @see com.borodatos.service.ArticleService#listComics()
+	 */
+	@Transactional
+    public List<ComicsArticle> listComics() {
+        
+        return articleDAO.listComics();
+    }
+	
+	// take an article on link
+	/* (non-Javadoc)
+	 * @see com.borodatos.service.ArticleService#retrieveComics(java.lang.String)
+	 */
+	@Transactional
+    public Article retrieveComics(String link) {
+        
+        return articleDAO.retriveComics(link);
     }
 
 }

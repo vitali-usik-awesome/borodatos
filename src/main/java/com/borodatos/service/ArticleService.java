@@ -11,14 +11,14 @@ import com.borodatos.model.ComicsArticle;
  */
 public interface ArticleService {
 
+    public List<Article> listPopular();
+    
 	public List<ComicsArticle> listComics();
 
-	public ComicsArticle retrieveComics(String link);
+	public Article retrieveComics(String link);
 
 	public void saveComics(ComicsArticle comics);
 
 	public void removeComics(Integer id);
-
-    public List<Article> listPopular();
 
 }
