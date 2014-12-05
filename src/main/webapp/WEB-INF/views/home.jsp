@@ -48,7 +48,7 @@
 						<c:forEach items="${listPopular}" var="pop" begin="0" end="1">
 							<li>
 								<a href="${pageContext.request.contextPath}/comics/${pop.link}">
-									<img src="${pop.brief}" />
+									<img src="${pop.titleImg}" />
 									<div class="thumb_item">
 										<h3>${pop.title}</h3>
 										<h4>${pop.views}</h4>
@@ -63,7 +63,7 @@
 						<c:forEach items="${listPopular}" var="pop" begin="2" end="4">
 							<li>
 								<a href="${pageContext.request.contextPath}/comics/${pop.link}">
-									<img src="${pop.brief}" />
+									<img src="${pop.titleImg}" />
 									<div class="thumb_item">
 										<h3>${pop.title}</h3>
 										<h4>${pop.views}</h4>
@@ -88,7 +88,7 @@
 							<div class="column">
 								<div class="item">
 									<a href="${pageContext.request.contextPath}/${comics.section}/${comics.link}">
-										<img src="${comics.brief}" />
+										<img src="${comics.titleImgV}" />
 										<div class="thumb_item">
 											<h3>${comics.title}</h3>
 											<h4>${comics.views}</h4>
@@ -103,7 +103,7 @@
 							<c:forEach items="${listComics}" var="comics" begin="1" end="2">	
 								<div class="two_line item">
 									<a href="${pageContext.request.contextPath}/${comics.section}/${comics.link}">
-										<img src="${comics.brief}" />
+										<img src="${comics.titleImgS}" />
 										<div class="thumb_item">
 											<h3>${comics.title}</h3>
 											<h4>${comics.views}</h4>
@@ -118,7 +118,7 @@
 							<div class="column">
 								<div class="item">
 									<a href="${pageContext.request.contextPath}/${comics.section}/${comics.link}">
-										<img src="${comics.brief}" />
+										<img src="${comics.titleImgV}" />
 										<div class="thumb_item">
 											<h3>${comics.title}</h3>
 											<h4>${comics.views}</h4>

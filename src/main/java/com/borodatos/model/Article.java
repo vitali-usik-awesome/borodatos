@@ -27,8 +27,14 @@ public class Article {
     @Column(name = "TITLE")
     private String title;
 
-    @Column(name = "BRIEF")
-    private String brief;
+    @Column(name = "TITLE_IMG")
+    private String titleImg;
+    
+    @Column(name = "TITLE_IMG_V")
+    private String titleImgV;
+    
+    @Column(name = "TITLE_IMG_S")
+    private String titleImgS;
 
     @Column(name = "CONTENT")
     private String content;
@@ -68,12 +74,28 @@ public class Article {
         this.title = title;
     }
 
-    public String getBrief() {
-        return brief;
+    public String getTitleImg() {
+        return titleImg;
     }
 
-    public void setBrief(String brief) {
-        this.brief = brief;
+    public void setTitleImg(String titleImg) {
+        this.titleImg = titleImg;
+    }
+
+    public String getTitleImgV() {
+        return titleImgV;
+    }
+
+    public void setTitleImgV(String titleImgV) {
+        this.titleImgV = titleImgV;
+    }
+
+    public String getTitleImgS() {
+        return titleImgS;
+    }
+
+    public void setTitleImgS(String titleImgS) {
+        this.titleImgS = titleImgS;
     }
 
     public String getContent() {
