@@ -20,7 +20,7 @@ import com.borodatos.service.ImageService;
 
 /**
  * 
- * @author Vitali_Usik
+ * @author Vitali Usik
  * 
  */
 @Controller

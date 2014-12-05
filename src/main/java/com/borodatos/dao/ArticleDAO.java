@@ -24,8 +24,6 @@ public class ArticleDAO {
 	@Autowired
     private SessionFactory sessionFactory;
 
-	
-
 	public void saveComics(ComicsArticle comics) {
 	    
 		sessionFactory.getCurrentSession().saveOrUpdate(comics);
@@ -73,4 +71,5 @@ public class ArticleDAO {
         
         return article;
     }
+
 }
