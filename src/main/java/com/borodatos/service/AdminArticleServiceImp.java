@@ -3,6 +3,8 @@ package com.borodatos.service;
 import java.sql.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -40,7 +42,9 @@ public class AdminArticleServiceImp implements AdminArticleService {
             Date date = new Date(System.currentTimeMillis());
             article.setDate(date);
         }
-        
+        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        System.out.println(user.getUsername());
+        article.setAuthor(user.getUsername());
         adminArticleDAO.saveComics(article);
 
     }
