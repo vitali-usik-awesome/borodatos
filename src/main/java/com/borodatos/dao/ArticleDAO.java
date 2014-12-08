@@ -69,7 +69,7 @@ public class ArticleDAO {
         Integer viewPlus = article.getViews() + 1;
         article.setViews(viewPlus);
         sessionFactory.getCurrentSession().saveOrUpdate(article);
-        
+
         return article;
     }
 }

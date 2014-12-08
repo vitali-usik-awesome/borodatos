@@ -12,14 +12,14 @@ import com.borodatos.service.ArticleService;
 
 /**
  * @author Vitali Usik
- *
+ * 
  */
 @Controller
 public class ArticleController {
 
     @Autowired
     private ArticleService articleService;
-    
+
     /**
      * @param link
      * @param map
@@ -30,7 +30,7 @@ public class ArticleController {
 
         Article article = articleService.retrieveArticle(section, link);
         map.put("comics", article);
-        
+
         return "article_page";
     }
 }

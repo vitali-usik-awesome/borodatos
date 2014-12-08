@@ -39,7 +39,7 @@
 		<div class="content">
 			<div class="comics_edit">
 			<h3>Comics</h3>
-			<form:form method="post" action="${pageContext.request.contextPath}/comics/save" commandName="comics" class="edit">
+			<form:form method="post" action="${pageContext.request.contextPath}/admin/article/save" commandName="article" class="edit">
 				<table>
 					<tr>
 						<td><!-- id --></td>
@@ -50,12 +50,20 @@
 						<td><form:input path="title" /></td>
 					</tr>
 					<tr>
-						<td><form:label path="id">brief</form:label></td>
-						<td><form:input path="brief" /></td>
+						<td><form:label path="id">titleImg</form:label></td>
+						<td><form:input path="titleImg" /></td>
+					</tr>
+					<tr>
+						<td><form:label path="id">titleImgV</form:label></td>
+						<td><form:input path="titleImgV" /></td>
+					</tr>
+					<tr>
+						<td><form:label path="id">titleImgS</form:label></td>
+						<td><form:input path="titleImgS" /></td>
 					</tr>
 					<tr>
 						<td><form:label path="id">content</form:label></td>
-						<td><form:textarea rows="10" cols="130" path="content" /></td>
+						<td><form:input path="content" /></td>
 					</tr>
 					<tr>
 						<td><form:label path="id">author</form:label></td>
@@ -66,12 +74,17 @@
 						<td><form:input path="link" /></td>
 					</tr>
 					<tr>
+						<td><form:label path="id">section</form:label></td>
+						<td><form:input path="section" /></td>
+					</tr>				
+					<tr>
+						<td><form:label path="id">priority</form:label></td>
+						<td><form:input path="priority" /></td>
+					</tr>				
+					<tr>
 						<td><form:label path="id">views</form:label></td>
 						<td>
 							<form:input path="views" disabled="true"/>
-							<c:if test="${empty comicsList }">
-								ololo
-							</c:if>
 						</td>
 					</tr>
 					<tr>

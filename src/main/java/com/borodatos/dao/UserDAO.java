@@ -12,14 +12,14 @@ import com.borodatos.model.User;
 
 /**
  * @author Vitali Usik
- *
+ * 
  */
 @Repository
 public class UserDAO {
 
     @Autowired
     private SessionFactory sessionFactory;
-    
+
     /**
      * @param username
      * @return
