@@ -54,7 +54,7 @@ public class ArticleServiceImpl implements ArticleService {
         return articleDAO.listPopular();
     }
 	
-	// colect latest comics articles
+	// collects latest comics articles
 	/* (non-Javadoc)
 	 * @see com.borodatos.service.ArticleService#listComics()
 	 */
@@ -64,14 +64,13 @@ public class ArticleServiceImpl implements ArticleService {
         return articleDAO.listComics();
     }
 	
-	// take an article on link
 	/* (non-Javadoc)
-	 * @see com.borodatos.service.ArticleService#retrieveComics(java.lang.String)
+	 * @see com.borodatos.service.ArticleService#retrieveArticle(java.lang.String, java.lang.String)
 	 */
 	@Transactional
-    public Article retrieveComics(String link) {
-        
-        return articleDAO.retriveComics(link);
-    }
+	public Article retrieveArticle(String section, String link) {
+	    
+	    return articleDAO.retrieveArticle(section, link);
+	}
 
 }

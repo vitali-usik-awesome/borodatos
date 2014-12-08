@@ -55,14 +55,15 @@ public class ArticleDAO {
     public List<ComicsArticle> listComics() {
         return sessionFactory.getCurrentSession().createQuery("FROM Article WHERE section = 'comics' ORDER BY date DESC").setMaxResults(5).list();
     }
-	
+
 	/**
-	 * @param link
-	 * @return
-	 */
-	public Article retriveComics(String link) {
+     * @param link
+     * @return
+     */
+    public Article retrieveArticle(String section, String link) {
         Article article = null;
-        Query q = sessionFactory.getCurrentSession().createQuery("FROM Article WHERE link = :link");
+        Query q = sessionFactory.getCurrentSession().createQuery("FROM Article WHERE (section = :section) AND (link = :link)");
+        q.setString("section", section);
         q.setString("link", link);
         article = (Article) q.uniqueResult();
         Integer viewPlus = article.getViews() + 1;
@@ -71,5 +72,4 @@ public class ArticleDAO {
         
         return article;
     }
-
 }

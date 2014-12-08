@@ -14,8 +14,8 @@ public interface ArticleService {
     public List<Article> listPopular();
     
 	public List<ComicsArticle> listComics();
-
-	public Article retrieveComics(String link);
+	
+	public Article retrieveArticle(String section, String link);
 
 	public void saveComics(ComicsArticle comics);
 

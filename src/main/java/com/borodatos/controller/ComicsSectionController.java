@@ -28,31 +28,17 @@ public class ComicsSectionController {
     @Autowired
     private ImageService imageService;
 
-    /**
-     * @param link
-     * @param map
-     * @return
-     */
-    @RequestMapping("/comics/{link}")
-    public String comicsPage(@PathVariable("link") String link, Map<String, Object> map) {
-
-        Article article = articleService.retrieveComics(link);
-        map.put("comics", article);
-        
-        return "comics_page";
-    }
-
-    @RequestMapping("/admin/edit/{link}")
-    public String editComics(@PathVariable("link") String link, Map<String, Object> map) {
-
-        Article article = articleService.retrieveComics(link);
-        map.put("comics", article);
-        
-        map.put("images", new ImageList());
-        map.put("listImages", imageService.listImages());
-
-        return "comics_edit";
-    }
+//    @RequestMapping("/admin/edit/{link}")
+//    public String editComics(@PathVariable("link") String link, Map<String, Object> map) {
+//
+//        Article article = articleService.retrieveComics(link);
+//        map.put("comics", article);
+//        
+//        map.put("images", new ImageList());
+//        map.put("listImages", imageService.listImages());
+//
+//        return "comics_edit";
+//    }
 
     @RequestMapping("/comics/save")
     public String saveComics(@ModelAttribute("comics") ComicsArticle comics, BindingResult result) {

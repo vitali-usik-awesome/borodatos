@@ -47,7 +47,7 @@
 					<c:if test="${!empty listPopular}">
 						<c:forEach items="${listPopular}" var="pop" begin="0" end="1">
 							<li>
-								<a href="${pageContext.request.contextPath}/comics/${pop.link}">
+								<a href="${pageContext.request.contextPath}/${pop.section}/${pop.link}">
 									<img src="${pop.titleImg}" />
 									<div class="thumb_item">
 										<h3>${pop.title}</h3>
@@ -62,7 +62,7 @@
 					<c:if test="${!empty listPopular}">
 						<c:forEach items="${listPopular}" var="pop" begin="2" end="4">
 							<li>
-								<a href="${pageContext.request.contextPath}/comics/${pop.link}">
+								<a href="${pageContext.request.contextPath}/${pop.section}/${pop.link}">
 									<img src="${pop.titleImg}" />
 									<div class="thumb_item">
 										<h3>${pop.title}</h3>
