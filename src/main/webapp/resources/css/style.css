@@ -151,10 +151,12 @@ footer {width: 100%; border-top: 1px solid #c2c2c2;}
 .content .signin {margin: 0 auto; padding: 1em 0; width: 300px;}
 	.signin h2 {text-align: center;}
 	.signin input {width: 290px; height: 30px; margin: 0.5em 0;}
+	.signin textarea {margin: 0.5em 0;}
 	.signin .sign_submit {cursor: pointer;}
 	
 .content .comics_edit {margin: 1em 5em;}
 	.comics_edit input {width: 930px; height: 30px; margin: 0.5em 0;}
+	.article_add_radio input {width: 50px; height: 15px; margin: 0.5em 0;}
 
 .image_list {border: 1px solid gray;}
 .image_list p {margin: 0.3em; line-height: 30px;}

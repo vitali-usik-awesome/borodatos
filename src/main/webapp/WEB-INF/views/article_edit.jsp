@@ -63,7 +63,7 @@
 					</tr>
 					<tr>
 						<td><form:label path="id">content</form:label></td>
-						<td><form:input path="content" /></td>
+						<td><form:textarea rows="10" cols="130" path="content" /></td>
 					</tr>
 					<tr>
 						<td><form:label path="id">author</form:label></td>
@@ -75,11 +75,20 @@
 					</tr>
 					<tr>
 						<td><form:label path="id">section</form:label></td>
-						<td><form:input path="section" /></td>
+						<td>
+							<form:select path="section">
+								<option value="comics">Комиксы</option>
+  								<option value="music">Музыка</option>
+  								<option value="games">Игры</option>
+  							</form:select>
+						</td>
 					</tr>				
 					<tr>
 						<td><form:label path="id">priority</form:label></td>
-						<td><form:input path="priority" /></td>
+						<td class="article_add_radio">
+							<form:radiobutton path="priority" value="huinuhai" />Так себе</br>
+							<form:radiobutton path="priority" value="pop" />Популярное
+						</td>
 					</tr>				
 					<tr>
 						<td><form:label path="id">views</form:label></td>
