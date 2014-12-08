@@ -37,8 +37,10 @@
 		<!-- /header -->
 		<!-- content -->
 		<div class="content">
-			<div class="comics_page">
-				<h2>${comics.title}</h2>
+			<div class="article_page">
+			<div class="left_column">
+				<h1>${comics.title}</h1>
+				<img src="${comics.titleImg}" alt="image" />
 				<p><b>Author:</b> ${comics.author}. <b>Date:</b> ${comics.date}. <b>Views:</b> ${comics.views}</p>
 				${comics.content}
 				<sec:authorize access="hasRole('ROLE_ADMIN')">
@@ -50,6 +52,11 @@
 					</p>
 				</div>
 				</sec:authorize>
+			</div>
+			<div class="right_column">
+				<!--  -->
+			</div>
+				
 			</div>			
 		</div>
 		<!-- /content -->

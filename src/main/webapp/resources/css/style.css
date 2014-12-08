@@ -139,18 +139,14 @@ footer {width: 100%; border-top: 1px solid #c2c2c2;}
 			.footer_social .in:hover {background: url(../img/social_sprite.png) -59px -180px no-repeat;}
 
 /* only in java project */
-.test_comics_wrapper {width: 100%; overflow: hidden;}
-	.test_comics_item {max-width: 590px; width: 32%; float: left; margin: 0 0.3em 1.5em 0.3em;}
-	.test_comics_item a {text-decoration: none; color: gray;}
-	.test_comics_item a:hover {text-decoration: underline;}
-.content .submit_button {width: 150px;}
-.content .main_banner {text-align: center;}
-
-.content .comics_page {margin: 1em 5em;}
-	.comics_page p {margin: 0.5em 0;}
-	.comics_page img {max-width: 100%;}
-	.comics_page .admin_options a {text-decoration: none; color: gray; margin: 0 0.5em;}
-	.comics_page .admin_options a:hover {text-decoration: underline;}
+.content .article_page {margin: 1em 0; overflow: hidden;}
+	.article_page .left_column {display: block; position: relative; float: left; width: 94em; margin-right: 2em;}
+	.article_page .right_column {display: block; position: relative; float: left; width: 24em;}
+	.article_page h1 {font-family: "HeliosCondBlack", sans-serif; margin: 0.5em 0;}
+	.article_page p {margin: 0.5em 0; font-size: 1.7em;}
+	.article_page img {max-width: 100%;}
+	.article_page .admin_options a {text-decoration: none; color: gray; margin: 0 0.5em;}
+	.article_page .admin_options a:hover {text-decoration: underline;}
 	
 .content .signin {margin: 0 auto; padding: 1em 0; width: 300px;}
 	.signin h2 {text-align: center;}

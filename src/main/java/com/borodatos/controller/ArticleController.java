@@ -31,6 +31,6 @@ public class ArticleController {
         Article article = articleService.retrieveArticle(section, link);
         map.put("comics", article);
         
-        return "comics_page";
+        return "article_page";
     }
 }
