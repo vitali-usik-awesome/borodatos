@@ -1,6 +1,6 @@
 package com.borodatos.model;
 
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -38,12 +38,18 @@ public class Article {
 
     @Column(name = "CONTENT")
     private String content;
+    
+    @Column(name = "TAGS")
+    private String tags;
 
     @Column(name = "AUTHOR")
     private String author;
 
     @Column(name = "DATE")
     private Date date;
+    
+    @Column(name = "STATUS")
+    private String status;
 
     @Column(name = "LINK")
     private String link;
@@ -58,99 +64,200 @@ public class Article {
     @GeneratedValue
     private Integer views;
 
-    public Integer getId() {
-        return id;
-    }
+	/**
+	 * @return the id
+	 */
+	public Integer getId() {
+		return id;
+	}
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public String getTitle() {
-        return title;
-    }
+	/**
+	 * @return the title
+	 */
+	public String getTitle() {
+		return title;
+	}
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+	/**
+	 * @param title the title to set
+	 */
+	public void setTitle(String title) {
+		this.title = title;
+	}
 
-    public String getTitleImg() {
-        return titleImg;
-    }
+	/**
+	 * @return the titleImg
+	 */
+	public String getTitleImg() {
+		return titleImg;
+	}
 
-    public void setTitleImg(String titleImg) {
-        this.titleImg = titleImg;
-    }
+	/**
+	 * @param titleImg the titleImg to set
+	 */
+	public void setTitleImg(String titleImg) {
+		this.titleImg = titleImg;
+	}
 
-    public String getTitleImgV() {
-        return titleImgV;
-    }
+	/**
+	 * @return the titleImgV
+	 */
+	public String getTitleImgV() {
+		return titleImgV;
+	}
 
-    public void setTitleImgV(String titleImgV) {
-        this.titleImgV = titleImgV;
-    }
+	/**
+	 * @param titleImgV the titleImgV to set
+	 */
+	public void setTitleImgV(String titleImgV) {
+		this.titleImgV = titleImgV;
+	}
 
-    public String getTitleImgS() {
-        return titleImgS;
-    }
+	/**
+	 * @return the titleImgS
+	 */
+	public String getTitleImgS() {
+		return titleImgS;
+	}
 
-    public void setTitleImgS(String titleImgS) {
-        this.titleImgS = titleImgS;
-    }
+	/**
+	 * @param titleImgS the titleImgS to set
+	 */
+	public void setTitleImgS(String titleImgS) {
+		this.titleImgS = titleImgS;
+	}
 
-    public String getContent() {
-        return content;
-    }
+	/**
+	 * @return the content
+	 */
+	public String getContent() {
+		return content;
+	}
 
-    public void setContent(String content) {
-        this.content = content;
-    }
+	/**
+	 * @param content the content to set
+	 */
+	public void setContent(String content) {
+		this.content = content;
+	}
 
-    public String getAuthor() {
-        return author;
-    }
+	/**
+	 * @return the tags
+	 */
+	public String getTags() {
+		return tags;
+	}
 
-    public void setAuthor(String author) {
-        this.author = author;
-    }
+	/**
+	 * @param tags the tags to set
+	 */
+	public void setTags(String tags) {
+		this.tags = tags;
+	}
 
-    public Date getDate() {
-        return date;
-    }
+	/**
+	 * @return the author
+	 */
+	public String getAuthor() {
+		return author;
+	}
 
-    public void setDate(Date date) {
-        this.date = date;
-    }
+	/**
+	 * @param author the author to set
+	 */
+	public void setAuthor(String author) {
+		this.author = author;
+	}
 
-    public String getLink() {
-        return link;
-    }
+	/**
+	 * @return the date
+	 */
+	public Date getDate() {
+		return date;
+	}
 
-    public void setLink(String link) {
-        this.link = link;
-    }
+	/**
+	 * @param date the date to set
+	 */
+	public void setDate(Date date) {
+		this.date = date;
+	}
 
-    public String getSection() {
-        return section;
-    }
+	/**
+	 * @return the status
+	 */
+	public String getStatus() {
+		return status;
+	}
 
-    public void setSection(String section) {
-        this.section = section;
-    }
+	/**
+	 * @param status the status to set
+	 */
+	public void setStatus(String status) {
+		this.status = status;
+	}
 
-    public String getPriority() {
-        return priority;
-    }
+	/**
+	 * @return the link
+	 */
+	public String getLink() {
+		return link;
+	}
 
-    public void setPriority(String priority) {
-        this.priority = priority;
-    }
+	/**
+	 * @param link the link to set
+	 */
+	public void setLink(String link) {
+		this.link = link;
+	}
 
-    public Integer getViews() {
-        return views;
-    }
+	/**
+	 * @return the section
+	 */
+	public String getSection() {
+		return section;
+	}
 
-    public void setViews(Integer views) {
-        this.views = views;
-    }
+	/**
+	 * @param section the section to set
+	 */
+	public void setSection(String section) {
+		this.section = section;
+	}
+
+	/**
+	 * @return the priority
+	 */
+	public String getPriority() {
+		return priority;
+	}
+
+	/**
+	 * @param priority the priority to set
+	 */
+	public void setPriority(String priority) {
+		this.priority = priority;
+	}
+
+	/**
+	 * @return the views
+	 */
+	public Integer getViews() {
+		return views;
+	}
+
+	/**
+	 * @param views the views to set
+	 */
+	public void setViews(Integer views) {
+		this.views = views;
+	}
+
 }

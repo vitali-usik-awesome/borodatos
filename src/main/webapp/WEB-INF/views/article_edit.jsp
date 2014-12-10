@@ -66,8 +66,18 @@
 						<td><form:textarea rows="10" cols="130" path="content" /></td>
 					</tr>
 					<tr>
-						<td><form:label path="id">author</form:label></td>
-						<td><form:input path="author" /></td>
+						<td><form:label path="id">tags</form:label></td>
+						<td><form:input path="tags" /></td>
+					</tr>
+					<tr>
+						<td><form:label path="id">status</form:label></td>
+						<td>
+							<form:select path="status">
+								<option value="draft">Черновик</option>
+  								<option value="public">Опубликовано</option>
+  								<option value="private">Приватный пост</option>
+  							</form:select>
+						</td>
 					</tr>
 					<tr>
 						<td><form:label path="id">link</form:label></td>

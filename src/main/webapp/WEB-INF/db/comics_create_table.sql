@@ -22,9 +22,11 @@ CREATE TABLE IF NOT EXISTS `article` (
   `title_img` mediumtext NOT NULL,
   `title_img_v` mediumtext NOT NULL,
   `title_img_s` mediumtext NOT NULL,
-  `content` mediumtext NOT NULL,
+  `content` longtext NOT NULL,
+  `tags` mediumtext NOT NULL,
   `author` mediumtext NOT NULL,
-  `date` date NOT NULL,
+  `date` datetime NOT NULL,
+  `status` mediumtext NOT NULL,
   `link` mediumtext NOT NULL,
   `section` mediumtext NOT NULL,
   `priority` mediumtext NOT NULL,
@@ -34,13 +36,13 @@ CREATE TABLE IF NOT EXISTS `article` (
 
 -- Dumping data for table borodatos.article: ~6 rows (approximately)
 /*!40000 ALTER TABLE `article` DISABLE KEYS */;
-INSERT INTO `article` (`id`, `title`, `title_img`, `title_img_v`, `title_img_s`, `content`, `author`, `date`, `link`, `section`, `priority`, `views`) VALUES
-	(1, 'Are you ready for the truth? Are you ready for the truth?', 'http://localhost:8080/borodatos/resources/pic/00.jpg', 'http://localhost:8080/borodatos/resources/pic/00-v.jpg', 'http://localhost:8080/borodatos/resources/pic/00-s.jpg', '1', '1', '2014-12-03', '1', 'comics', 'pop', 00000000002),
-	(2, 'Are you ready for the truth? Are you ready for the truth?', 'http://localhost:8080/borodatos/resources/pic/00.jpg', 'http://localhost:8080/borodatos/resources/pic/00-v.jpg', 'http://localhost:8080/borodatos/resources/pic/00-s.jpg', '1', '1', '2014-12-03', '2', 'comics', 'pop', 00000000001),
-	(3, 'Are you ready for the truth? Are you ready for the truth?', 'http://localhost:8080/borodatos/resources/pic/00.jpg', 'http://localhost:8080/borodatos/resources/pic/00-v.jpg', 'http://localhost:8080/borodatos/resources/pic/00-s.jpg', '1', '1', '2014-12-03', '3', 'comics', 'pop', 00000000001),
-	(4, 'Are you ready for the truth? Are you ready for the truth?', 'http://localhost:8080/borodatos/resources/pic/00.jpg', 'http://localhost:8080/borodatos/resources/pic/00-v.jpg', 'http://localhost:8080/borodatos/resources/pic/00-s.jpg', '1', '1', '2014-12-03', '4', 'comics', 'pop', 00000000001),
-	(5, 'Are you ready for the truth? Are you ready for the truth?', 'http://localhost:8080/borodatos/resources/pic/00.jpg', 'http://localhost:8080/borodatos/resources/pic/00-v.jpg', 'http://localhost:8080/borodatos/resources/pic/00-s.jpg', '1', '1', '2014-12-03', '5', 'comics', 'pop', 00000000001),
-	(6, 'Are you ready for the truth? Are you ready for the truth?', 'http://localhost:8080/borodatos/resources/pic/00.jpg', 'http://localhost:8080/borodatos/resources/pic/00-v.jpg', 'http://localhost:8080/borodatos/resources/pic/00-s.jpg', '1', '1', '2014-12-03', '6', 'comics', 'pop', 00000000001);
+INSERT INTO `article` (`id`, `title`, `title_img`, `title_img_v`, `title_img_s`, `content`, `tags`, `author`, `date`, `status`, `link`, `section`, `priority`, `views`) VALUES
+	(1, 'Are you ready for the truth? Are you ready for the truth?', 'http://localhost:8080/borodatos/resources/pic/00.jpg', 'http://localhost:8080/borodatos/resources/pic/00-v.jpg', 'http://localhost:8080/borodatos/resources/pic/00-s.jpg', '1', 'tag, tag1, tag2', '1', '2014-12-03 00:00:00', 'public', '1', 'comics', 'pop', 00000000002),
+	(2, 'Are you ready for the truth? Are you ready for the truth?', 'http://localhost:8080/borodatos/resources/pic/00.jpg', 'http://localhost:8080/borodatos/resources/pic/00-v.jpg', 'http://localhost:8080/borodatos/resources/pic/00-s.jpg', '1', 'tag, tag1, tag2', '1', '2014-12-03 00:00:00', 'public', '2', 'comics', 'pop', 00000000002),
+	(3, 'Are you ready for the truth? Are you ready for the truth?', 'http://localhost:8080/borodatos/resources/pic/00.jpg', 'http://localhost:8080/borodatos/resources/pic/00-v.jpg', 'http://localhost:8080/borodatos/resources/pic/00-s.jpg', '1', 'tag, tag1, tag2', '1', '2014-12-03 00:00:00', 'public', '3', 'comics', 'pop', 00000000002),
+	(4, 'Are you ready for the truth? Are you ready for the truth?', 'http://localhost:8080/borodatos/resources/pic/00.jpg', 'http://localhost:8080/borodatos/resources/pic/00-v.jpg', 'http://localhost:8080/borodatos/resources/pic/00-s.jpg', '1', 'tag, tag1, tag2', '1', '2014-12-03 00:00:00', 'public', '4', 'comics', 'pop', 00000000002),
+	(5, 'Are you ready for the truth? Are you ready for the truth?', 'http://localhost:8080/borodatos/resources/pic/00.jpg', 'http://localhost:8080/borodatos/resources/pic/00-v.jpg', 'http://localhost:8080/borodatos/resources/pic/00-s.jpg', '1', 'tag, tag1, tag2', '1', '2014-12-03 00:00:00', 'public', '5', 'comics', 'pop', 00000000002),
+	(6, 'Are you ready for the truth? Are you ready for the truth?', 'http://localhost:8080/borodatos/resources/pic/00.jpg', 'http://localhost:8080/borodatos/resources/pic/00-v.jpg', 'http://localhost:8080/borodatos/resources/pic/00-s.jpg', '1', 'tag, tag1, tag2', '1', '2014-12-03 00:00:00', 'public', '6', 'comics', 'pop', 00000000002);
 /*!40000 ALTER TABLE `article` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;

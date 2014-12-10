@@ -1,6 +1,6 @@
 package com.borodatos.service;
 
-import java.sql.Date;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -39,14 +39,10 @@ public class AdminArticleServiceImp implements AdminArticleService {
             article.setViews(0);
         }
         if (article.getDate() == null) {
-            Date date = new Date(System.currentTimeMillis());
-            article.setDate(date);
+            article.setDate(new Date());
         }
         User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        System.out.println(user.getUsername());
         article.setAuthor(user.getUsername());
         adminArticleDAO.saveComics(article);
-
     }
-
 }
