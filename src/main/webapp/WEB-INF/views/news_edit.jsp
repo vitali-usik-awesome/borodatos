@@ -38,8 +38,8 @@
 		<!-- content -->
 		<div class="content">
 			<div class="comics_edit">
-			<h3>Article</h3>
-			<form:form method="post" action="${pageContext.request.contextPath}/admin/article/save" commandName="article" class="edit">
+			<h3>News</h3>
+			<form:form method="post" action="${pageContext.request.contextPath}/admin/news/save" commandName="news" class="edit">
 				<table>
 					<tr>
 						<td><!-- id --></td>
@@ -54,20 +54,8 @@
 						<td><form:input path="titleImg" /></td>
 					</tr>
 					<tr>
-						<td><form:label path="id">titleImgV</form:label></td>
-						<td><form:input path="titleImgV" /></td>
-					</tr>
-					<tr>
-						<td><form:label path="id">titleImgS</form:label></td>
-						<td><form:input path="titleImgS" /></td>
-					</tr>
-					<tr>
 						<td><form:label path="id">content</form:label></td>
 						<td><form:textarea rows="10" cols="130" path="content" /></td>
-					</tr>
-					<tr>
-						<td><form:label path="id">tags</form:label></td>
-						<td><form:input path="tags" /></td>
 					</tr>
 					<tr>
 						<td><form:label path="id">status</form:label></td>
@@ -75,35 +63,7 @@
 							<form:select path="status">
 								<option value="draft">Черновик</option>
   								<option value="public">Опубликовано</option>
-  								<option value="private">Приватный пост</option>
   							</form:select>
-						</td>
-					</tr>
-					<tr>
-						<td><form:label path="id">link</form:label></td>
-						<td><form:input path="link" /></td>
-					</tr>
-					<tr>
-						<td><form:label path="id">section</form:label></td>
-						<td>
-							<form:select path="section">
-								<option value="comics">Комиксы</option>
-  								<option value="music">Музыка</option>
-  								<option value="games">Игры</option>
-  							</form:select>
-						</td>
-					</tr>				
-					<tr>
-						<td><form:label path="id">priority</form:label></td>
-						<td class="article_add_radio">
-							<form:radiobutton path="priority" value="huinuhai" />Так себе</br>
-							<form:radiobutton path="priority" value="pop" />Популярное
-						</td>
-					</tr>				
-					<tr>
-						<td><form:label path="id">views</form:label></td>
-						<td>
-							<form:input path="views" disabled="true"/>
 						</td>
 					</tr>
 					<tr>

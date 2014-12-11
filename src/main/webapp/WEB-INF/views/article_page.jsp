@@ -47,7 +47,7 @@
 				<div class="admin_options">
 					<p><b>Admin Options:</b>
 						<a href="${pageContext.request.contextPath}/admin/edit/${comics.link}">edit</a>
-						<a href="${pageContext.request.contextPath}/admin/add">add</a>
+						<a href="${pageContext.request.contextPath}/admin/addArticle">add</a>
 						<a href="${pageContext.request.contextPath}/admin/delete/${comics.id}">delete</a>
 					</p>
 				</div>

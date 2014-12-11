@@ -23,5 +23,17 @@ public class NewsDAO {
         
         return sessionFactory.getCurrentSession().createQuery("FROM News WHERE status = 'public' ORDER BY date DESC").setMaxResults(9).list();
     }
+
+    public void saveComics(News news) {
+
+        sessionFactory.getCurrentSession().saveOrUpdate(news);
+        
+    }
+
+    @SuppressWarnings("unchecked")
+    public List<News> listAllNews() {
+
+        return sessionFactory.getCurrentSession().createQuery("FROM News ORDER BY date DESC").list();
+    }
     
 }

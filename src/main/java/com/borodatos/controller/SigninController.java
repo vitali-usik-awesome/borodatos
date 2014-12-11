@@ -21,7 +21,7 @@ public class SigninController {
         return "huser/husignin_failure";
     }
     
-    @RequestMapping(value = "/admin/admin_page")
+    @RequestMapping(value = "/admin/adminPage")
     public String adminHome() {
         return "admin_page";
     }

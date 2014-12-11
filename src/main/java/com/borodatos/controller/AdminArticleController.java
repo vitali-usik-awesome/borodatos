@@ -26,7 +26,7 @@ public class AdminArticleController {
     @Autowired
     private AdminArticleService adminArticleService;
 
-    @RequestMapping("/admin/add")
+    @RequestMapping("/admin/addArticle")
     public String addArticle(@ModelAttribute("article") Article article, BindingResult result, Map<String, Object> map) {
 
         map.put("images", new ImageList());

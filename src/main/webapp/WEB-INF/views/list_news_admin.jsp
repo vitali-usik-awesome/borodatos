@@ -37,6 +37,23 @@
 		<!-- content -->
 		<div class="content">
 			<div class="admin_page">
+				<h3>Список новостей</h3>
+				<c:if test="${!empty listNews}">
+					<c:forEach items="${listNews}" var="news">
+						<li>
+							<img src="${news.titleImg}" />
+							<h3>${news.title}</h3>
+							<p>${news.author}</p>
+							<p>${news.date}</p>
+							<p>${news.status}</p>
+							<p>${news.content}</p>
+							<a href="${pageContext.request.contextPath}/admin/editNews">Редактировать новость</a>
+						</li>
+					</c:forEach>
+				</c:if>
+				
+				
+				
 				<h3>Hello, Admin, motherfucker!</h3>
 				<ul>
 					<li>

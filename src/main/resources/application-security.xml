@@ -11,7 +11,7 @@
 	<http auto-config="true" use-expressions="true">
 		<intercept-url pattern="/huiadmin/**" access="hasRole('ROLE_ADMIN')" />
 		<intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')"  />
-		<form-login login-page="/husignin" authentication-failure-url="/husignin-failure" default-target-url="/admin_page" />
+		<form-login login-page="/husignin" authentication-failure-url="/husignin-failure" default-target-url="/adminPage" />
 	</http>
 
 	<authentication-manager>

@@ -26,7 +26,7 @@ public class ArticleController {
      * @return
      */
     @RequestMapping("/{section}/{link}")
-    public String comicsPage(@PathVariable("section") String section, @PathVariable("link") String link, Map<String, Object> map) {
+    public String articlePage(@PathVariable("section") String section, @PathVariable("link") String link, Map<String, Object> map) {
 
         Article article = articleService.retrieveArticle(section, link);
         map.put("comics", article);
