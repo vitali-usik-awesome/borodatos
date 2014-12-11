@@ -20,15 +20,9 @@ public class SigninController {
     public String signinFailure() {
         return "huser/husignin_failure";
     }
-
-    /**
-     * only for test with spring security, page huser_login contains only logout
-     * link
-     * 
-     * @return
-     */
-    @RequestMapping("/huiadmin")
-    public String huiLogin() {
-        return "huser_login";
+    
+    @RequestMapping(value = "/admin/admin_page")
+    public String adminHome() {
+        return "admin_page";
     }
 }

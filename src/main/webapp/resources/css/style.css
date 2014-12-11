@@ -153,6 +153,11 @@ footer {width: 100%; border-top: 1px solid #c2c2c2;}
 	.signin input {width: 290px; height: 30px; margin: 0.5em 0;}
 	.signin textarea {margin: 0.5em 0;}
 	.signin .sign_submit {cursor: pointer;}
+
+.admin_page {margin: 1em 0; padding: 1em 0; overflow: hidden;}
+    .admin_page h3 {font-size: 1.5em;}
+    .admin_page a {font-size: 1.5em; color: #494949; text-decoration: none;}
+    .admin_page a:hover {text-decoration: underline;}
 	
 .content .comics_edit {margin: 1em 5em;}
 	.comics_edit input {width: 930px; height: 30px; margin: 0.5em 0;}

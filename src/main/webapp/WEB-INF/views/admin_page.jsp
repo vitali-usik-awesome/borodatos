@@ -1,9 +1,7 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
-<%@taglib uri="http://www.springframework.org/security/tags" prefix="sec"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@page contentType="text/html;charset=UTF-8" language="java" %>
-<%@page session="false"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf8">
@@ -34,15 +32,25 @@
 <body>
 	<div class="wrapper">
 		<!-- header -->
-		<%@ include file="jspf/header.jspf" %>
+		<%@ include file="jspf/header.jspf" %>	
 		<!-- /header -->
 		<!-- content -->
 		<div class="content">
-			<h3>Hello, Admin!</h3>
-			<sec:authorize access="isAuthenticated()">
-				<a href="<c:url value="/j_spring_security_logout"/>">Logout</a>
-			</sec:authorize>
-		</div>
+			<div class="admin_page">
+				<h3>Hello, Admin, motherfucker!</h3>
+				<ul>
+					<li>
+						<sec:authorize access="isAuthenticated()">
+							<a href="<c:url value="/j_spring_security_logout"/>">Выйти</a>
+						</sec:authorize>
+					</li>
+					<li>
+						<a href="${pageContext.request.contextPath}/admin/add">Добавить статью</a>
+					</li>
+				</ul>
+				
+			</div>
+		</div>	
 		<!-- /content -->
 		<!-- footer -->
 		<%@ include file="jspf/footer.jspf" %>	
