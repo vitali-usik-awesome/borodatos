@@ -131,6 +131,62 @@
 				</div>
 			</div>
 			<!-- /content_section_wrapper -->
+			<!-- content_section_wrapper -->
+			<div class="content_section_wrapper">
+				<div class="section_header news_header">
+					<div class="section_head_name">
+						<p><a>Новости</a></p>
+					</div>
+				</div>
+				<c:if test="${!empty listNews}">
+					<div class="section_wrapper">				
+						<c:forEach items="${listNews}" var="news" begin="0" end="2">
+							<div class="news_column">
+								<div class="news_item">
+									<div class="news_img">
+										<img src="${news.titleImg}" />
+									</div>
+									<div class="news_content">
+										<h5>${news.title}</h5>
+										<p>${news.content}</p>
+									</div>
+								</div>
+							</div>
+						</c:forEach>				
+					</div>
+					<div class="section_wrapper">				
+						<c:forEach items="${listNews}" var="news" begin="3" end="5">
+							<div class="news_column">
+								<div class="news_item">
+									<div class="news_img">
+										<img src="${news.titleImg}" />
+									</div>
+									<div class="news_content">
+										<h5>${news.title}</h5>
+										<p>${news.content}</p>
+									</div>
+								</div>
+							</div>
+						</c:forEach>				
+					</div>
+					<div class="section_wrapper">				
+						<c:forEach items="${listNews}" var="news" begin="6" end="8">
+							<div class="news_column">
+								<div class="news_item">
+									<div class="news_img">
+										<img src="${news.titleImg}" />
+									</div>
+									<div class="news_content">
+										<h5>${news.title}</h5>
+										<p>${news.content}</p>
+									</div>
+								</div>
+							</div>
+						</c:forEach>				
+					</div>
+				</c:if>				
+			</div>
+			<!-- /content_section_wrapper -->
 		</div>	
 		<!-- /content -->
 		<!-- footer -->

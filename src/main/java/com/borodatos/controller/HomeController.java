@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.borodatos.model.Article;
 import com.borodatos.model.ComicsArticle;
+import com.borodatos.model.News;
 import com.borodatos.service.ArticleService;
+import com.borodatos.service.NewsService;
 
 /**
  * @author Vitali Usik
@@ -19,6 +21,9 @@ public class HomeController {
 
     @Autowired
     private ArticleService articleService;
+    
+    @Autowired
+    private NewsService newsService;
 
     @RequestMapping("/")
     public String homePage(Map<String, Object> map) {
@@ -27,6 +32,8 @@ public class HomeController {
         map.put("listPopular", articleService.listPopular());
         map.put("comics", new ComicsArticle());
         map.put("listComics", articleService.listComics());
+        map.put("news", new News());
+        map.put("listNews", newsService.listNews());
 
         return "home";
     }
