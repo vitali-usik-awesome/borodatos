@@ -156,8 +156,13 @@ footer {width: 100%; border-top: 1px solid #c2c2c2;}
 
 .admin_page {margin: 1em 0; padding: 1em 0; overflow: hidden;}
     .admin_page h3 {font-size: 1.5em;}
-    .admin_page a {font-size: 1.5em; color: #494949; text-decoration: none;}
+    .admin_page a {color: #494949; text-decoration: none;}
     .admin_page a:hover {text-decoration: underline;}
+    .admin_page img {width: 110px;}
+    table {border: 1px solid #494949;}
+    .news_author {width: 100px; text-align: center;}
+    .news_date {width: 150px; text-align: center;}
+    .news_status {width: 100px; text-align: center;}
 	
 .content .comics_edit {margin: 1em 5em;}
 	.comics_edit input {width: 930px; height: 30px; margin: 0.5em 0;}
