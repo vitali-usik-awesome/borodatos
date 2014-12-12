@@ -44,4 +44,10 @@ public class NewsServiceImpl implements NewsService {
         return newsDAO.listAllNews();
     }
 
+    @Transactional
+    public News retrieveArticle(String id) {
+        
+        return newsDAO.retrieveNews(id);
+    }
+
 }

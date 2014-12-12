@@ -58,12 +58,12 @@ public class NewsController {
     @RequestMapping("/admin/editNews/{id}")
     public String editNews(@PathVariable("id") String id, Map<String, Object> map) {
 
-        //News news = newsService.retrieveArticle(id);
-        //map.put("news", news);
+        News news = newsService.retrieveArticle(id);
+        map.put("news", news);
 
         map.put("images", new ImageList());
         map.put("listImages", imageService.listImages());
 
-        return "comics_edit";
+        return "news_edit";
     }
 }

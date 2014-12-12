@@ -26,5 +26,7 @@ public interface NewsService {
      * @return
      */
     public List<News> listAllNews();
+
+    public News retrieveArticle(String id);
     
 }

@@ -76,7 +76,7 @@
 							<td class="news_author">${news.author}</td>
 							<td class="news_date">${news.date}</td>
 							<td class="news_status">${news.status}</td>
-							<td><a href="${pageContext.request.contextPath}/admin/editNews">Редактировать</a></td>
+							<td><a href="${pageContext.request.contextPath}/admin/editNews/${news.id}">Редактировать</a></td>
 						</tr>
 						</c:forEach>
 					</table>
