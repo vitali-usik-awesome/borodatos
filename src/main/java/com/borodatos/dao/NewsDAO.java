@@ -26,7 +26,7 @@ public class NewsDAO {
         return sessionFactory.getCurrentSession().createQuery("FROM News WHERE status = 'public' ORDER BY date DESC").setMaxResults(9).list();
     }
 
-    public void saveComics(News news) {
+    public void saveNews(News news) {
 
         sessionFactory.getCurrentSession().saveOrUpdate(news);
         

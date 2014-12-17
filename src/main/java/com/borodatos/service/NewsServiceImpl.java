@@ -35,7 +35,7 @@ public class NewsServiceImpl implements NewsService {
         }
         User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         news.setAuthor(user.getUsername());
-        newsDAO.saveComics(news);
+        newsDAO.saveNews(news);
     }
 
     @Transactional
@@ -45,7 +45,7 @@ public class NewsServiceImpl implements NewsService {
     }
 
     @Transactional
-    public News retrieveArticle(String id) {
+    public News retrieveNews(String id) {
         
         return newsDAO.retrieveNews(id);
     }

@@ -58,7 +58,7 @@ public class NewsController {
     @RequestMapping("/admin/editNews/{id}")
     public String editNews(@PathVariable("id") String id, Map<String, Object> map) {
 
-        News news = newsService.retrieveArticle(id);
+        News news = newsService.retrieveNews(id);
         map.put("news", news);
 
         map.put("images", new ImageList());
