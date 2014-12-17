@@ -187,6 +187,26 @@
 				</c:if>				
 			</div>
 			<!-- /content_section_wrapper -->
+			<!-- content_section_wrapper -->
+			<div class="content_section_wrapper">
+				<div class="section_header afisha_header">
+					<div class="section_head_name">
+						<p><a>Афиша</a></p>
+					</div>
+				</div>
+				<c:if test="${!empty listAfisha}">	
+				<div class="section_wrapper">
+					<c:forEach items="${listAfisha}" var="afisha" begin="0" end="5">	
+						<div class="afisha_item">
+							<a href="${afisha.link}">
+								<img src="${afisha.titleImg}" alt="${afisha.title}" title="${afisha.title}">
+							</a>
+						</div>
+					</c:forEach>	
+				</div>
+				</c:if>
+			</div>
+			<!-- content_section_wrapper -->
 		</div>	
 		<!-- /content -->
 		<!-- footer -->

@@ -6,9 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.borodatos.model.Afisha;
 import com.borodatos.model.Article;
 import com.borodatos.model.ComicsArticle;
 import com.borodatos.model.News;
+import com.borodatos.service.AfishaService;
 import com.borodatos.service.ArticleService;
 import com.borodatos.service.NewsService;
 
@@ -24,6 +26,9 @@ public class HomeController {
     
     @Autowired
     private NewsService newsService;
+    
+    @Autowired
+    private AfishaService afishaService;
 
     @RequestMapping("/")
     public String homePage(Map<String, Object> map) {
@@ -34,6 +39,8 @@ public class HomeController {
         map.put("listComics", articleService.listComics());
         map.put("news", new News());
         map.put("listNews", newsService.listNews());
+        map.put("afisha", new Afisha());
+        map.put("listAfisha", afishaService.listAfisha());
 
         return "home";
     }

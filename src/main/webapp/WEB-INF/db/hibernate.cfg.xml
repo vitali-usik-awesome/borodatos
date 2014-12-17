@@ -9,6 +9,6 @@
 		<mapping class="com.borodatos.model.News" />
 		<mapping class="com.borodatos.model.User" />
 		<mapping class="com.borodatos.model.UserRole" />
-		<mapping class="com.borodatos.model.ComicsArticle" />
+		<mapping class="com.borodatos.model.Afisha" />
 	</session-factory>
 </hibernate-configuration>
