@@ -175,6 +175,13 @@ footer {width: 100%; border-top: 1px solid #c2c2c2;}
 .content .img_upload {margin: 1em 5em;}
 	.img_upload form {border: 1px solid gray; margin-bottom: 0.5em;}
 	.img_upload tr {height: 40px;}
+	
+.admin_quick_panel {display: block; position: fixed; left: 10; top: 10; border: 1px solid #000;}
+	.admin_quick_panel ul {margin: 1em;}
+	.admin_quick_panel li {margin-bottom: 0.5em;}
+	.admin_quick_panel li:last-child {margin-bottom: 0;}
+	.admin_quick_panel a {font-size: 14px; line-height: 14px; font-family: "HeliosCondBlack", sans-serif; color: #000; text-decoration: none;}
+	.admin_quick_panel a:hover {text-decoration: underline;}
 /* only in java project */
 
 /* media */

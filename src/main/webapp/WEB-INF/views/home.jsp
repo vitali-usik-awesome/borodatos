@@ -213,5 +213,29 @@
 		<%@ include file="jspf/footer.jspf" %>	
 		<!-- /footer -->
 	</div>
+	<sec:authorize access="isAuthenticated()">
+	<div class="admin_quick_panel">
+		<ul>
+			<li>				
+				<a href="<c:url value="/j_spring_security_logout"/>">Выйти</a>
+			</li>
+			<li>
+				<a href="${pageContext.request.contextPath}/admin/addArticle">Добавить статью</a>
+			</li>
+			<li>
+				<a href="${pageContext.request.contextPath}/admin/showAllNews">Посмотреть новости</a>
+			</li>
+			<li>
+				<a href="${pageContext.request.contextPath}/admin/addNews">Добавить новость</a>
+			</li>
+			<li>
+				<a href="${pageContext.request.contextPath}/admin/showAllAfisha">Посмотреть афиши</a>
+			</li>
+			<li>
+				<a href="${pageContext.request.contextPath}/admin/addAfisha">Добавить афишу</a>
+			</li>
+		</ul>
+	</div>
+	</sec:authorize>
 </body>
 </html>
