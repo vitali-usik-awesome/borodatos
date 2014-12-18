@@ -96,14 +96,14 @@
 					<tr>
 						<td><form:label path="id">priority</form:label></td>
 						<td class="article_add_radio">
-							<form:radiobutton path="priority" value="huinuhai" />Так себе</br>
+							<form:radiobutton path="priority" value="huinuhai" />Так себе
 							<form:radiobutton path="priority" value="pop" />Популярное
 						</td>
 					</tr>				
 					<tr>
 						<td><form:label path="id">views</form:label></td>
 						<td>
-							<form:input path="views" disabled="true"/>
+							<form:input path="views" />
 						</td>
 					</tr>
 					<tr>

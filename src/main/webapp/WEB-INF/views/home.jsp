@@ -213,7 +213,7 @@
 		<%@ include file="jspf/footer.jspf" %>	
 		<!-- /footer -->
 	</div>
-	<sec:authorize access="isAuthenticated()">
+	<c:if test="${pageContext.request.userPrincipal.name != null}">
 	<div class="admin_quick_panel">
 		<ul>
 			<li>				
@@ -236,6 +236,6 @@
 			</li>
 		</ul>
 	</div>
-	</sec:authorize>
+	</c:if>
 </body>
 </html>

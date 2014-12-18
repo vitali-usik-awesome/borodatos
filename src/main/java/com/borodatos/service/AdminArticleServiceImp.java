@@ -25,16 +25,16 @@ public class AdminArticleServiceImp implements AdminArticleService {
     public void saveArticle(Article article) {
         if (article.getViews() == null) {
             // fucking shame, it's no work
-            int i = 0;
-            String link = article.getLink();
-            while (!adminArticleDAO.checkUniqueLink(link)) {
-                i++;
-                link += i;
-                System.out.println(i);
-            }
-            if (i > 0) {
-                article.setLink(article.getLink() + i);
-            }
+//            int i = 0;
+//            String link = article.getLink();
+//            while (!adminArticleDAO.checkUniqueLink(link)) {
+//                i++;
+//                link += i;
+//                System.out.println(i);
+//            }
+//            if (i > 0) {
+//                article.setLink(article.getLink() + i);
+//            }
             // fucking shame
             article.setViews(0);
         }
@@ -43,6 +43,12 @@ public class AdminArticleServiceImp implements AdminArticleService {
         }
         User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         article.setAuthor(user.getUsername());
-        adminArticleDAO.saveComics(article);
+        adminArticleDAO.saveArticle(article);
+    }
+
+    @Transactional
+    public Article retrieveArticle(String link) {
+        
+        return adminArticleDAO.retrieveArticle(link);
     }
 }

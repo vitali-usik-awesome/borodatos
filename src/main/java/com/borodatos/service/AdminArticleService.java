@@ -8,6 +8,15 @@ import com.borodatos.model.Article;
  */
 public interface AdminArticleService {
 
+    /**
+     * @param article
+     */
     public void saveArticle(Article article);
+
+    /**
+     * @param link
+     * @return
+     */
+    public Article retrieveArticle(String link);
     
 }

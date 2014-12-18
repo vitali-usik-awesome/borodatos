@@ -20,7 +20,7 @@ public class AdminArticleDAO {
     /**
      * @param article
      */
-    public void saveComics(Article article) {
+    public void saveArticle(Article article) {
 
         sessionFactory.getCurrentSession().saveOrUpdate(article);
 
@@ -39,5 +39,18 @@ public class AdminArticleDAO {
         }
         
         return unique;
+    }
+
+    /**
+     * @param link
+     * @return
+     */
+    public Article retrieveArticle(String link) {
+        Article article = null;
+        Query q = sessionFactory.getCurrentSession().createQuery("FROM Article WHERE link = :link");
+        q.setString("link", link);
+        article = (Article) q.uniqueResult();
+        
+        return article;
     }
 }

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.borodatos.model.Article;
@@ -36,7 +37,7 @@ public class AdminArticleController {
     }
 
     @RequestMapping("/admin/article/save")
-    public String saveComics(@ModelAttribute("article") Article article, BindingResult result) {
+    public String saveArticle(@ModelAttribute("article") Article article, BindingResult result) {
 
         adminArticleService.saveArticle(article);
 
@@ -44,16 +45,15 @@ public class AdminArticleController {
         return "redirect:/";
     }
 
-    // @RequestMapping("/admin/edit/{link}")
-    // public String editArticle(@PathVariable("link") String link, Map<String,
-    // Object> map) {
-    //
-    // Article article = adminArticleService.retrieveArticle(section, link);
-    // map.put("comics", article);
-    //
-    // map.put("images", new ImageList());
-    // map.put("listImages", imageService.listImages());
-    //
-    // return "comics_edit";
-    // }
+    @RequestMapping("/admin/edit/{link}")
+    public String editArticle(@PathVariable("link") String link, Map<String, Object> map) {
+
+        Article article = adminArticleService.retrieveArticle(link);
+        map.put("article", article);
+
+        map.put("images", new ImageList());
+        map.put("listImages", imageService.listImages());
+
+        return "article_edit";
+    }
 }
