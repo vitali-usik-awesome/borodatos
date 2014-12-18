@@ -53,6 +53,12 @@
 					<li>
 						<a href="${pageContext.request.contextPath}/admin/addNews">Добавить новость</a>
 					</li>
+					<li>
+						<a href="${pageContext.request.contextPath}/admin/showAllAfisha">Посмотреть афиши</a>
+					</li>
+					<li>
+						<a href="${pageContext.request.contextPath}/admin/addAfisha">Добавить афишу</a>
+					</li>
 				</ul>
 				<h3>Список новостей</h3>
 				<c:if test="${!empty listNews}">

@@ -37,7 +37,7 @@
 		<!-- content -->
 		<div class="content">
 			<div class="admin_page">
-				<h3>Hello, Admin, motherfucker!</h3>
+			<h3>Hello, Admin, motherfucker!</h3>
 				<ul>
 					<li>
 						<sec:authorize access="isAuthenticated()">
@@ -60,7 +60,30 @@
 						<a href="${pageContext.request.contextPath}/admin/addAfisha">Добавить афишу</a>
 					</li>
 				</ul>
-				
+				<h3>Список афиш</h3>
+				<c:if test="${!empty listAfisha}">
+					<table>
+						<tr>
+							<th>Img</th>
+							<th>Заголовок/Ссылка</th>							
+							<th>Автор</th>
+							<th>Статус</th>
+							<th>Действия</th>
+						</tr>
+						<c:forEach items="${listAfisha}" var="afisha">
+						<tr>
+							<td><img src="${afisha.titleImg}" /></td>
+							<td>
+								<h4>${afisha.title}</h4>
+								<p>${afisha.link}</p>
+							</td>
+							<td class="news_author">${afisha.author}</td>
+							<td class="news_status">${afisha.status}</td>
+							<td><a href="${pageContext.request.contextPath}/admin/editAfisha/${afisha.id}">Редактировать</a></td>
+						</tr>
+						</c:forEach>
+					</table>
+				</c:if>				
 			</div>
 		</div>	
 		<!-- /content -->
