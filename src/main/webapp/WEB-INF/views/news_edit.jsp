@@ -58,6 +58,10 @@
 						<td><form:textarea rows="10" cols="130" path="content" /></td>
 					</tr>
 					<tr>
+						<td><!-- date --></td>
+						<td><form:input path="date" type="hidden" /></td>
+					</tr>
+					<tr>
 						<td><form:label path="id">status</form:label></td>
 						<td>
 							<form:select path="status">
